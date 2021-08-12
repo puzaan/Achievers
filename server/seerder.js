@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
-import dotenv from 'dotenv'
-import Users from './data/user.js'
-import  user from './model/userModel.js'
-import connectDB from './database/db.js'
+const dotenv =require( 'dotenv')
+const Users = ('./data/user')
+const  user = ('./model/userModel')
+const connectDB =require('./database/db.js')
 
 
 dotenv.config();

@@ -106,8 +106,7 @@ const FormDetail = ({ history }) => {
 
     return (
         <div>
-        
-
+    
             <div style={{ height: 400, width: "95%", padding: "20px" }}>
                 <Typography variant="h4"> All User Forms</Typography>
                 {error && <Alerts severity="error"> {error}</Alerts>}

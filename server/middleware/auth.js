@@ -1,6 +1,6 @@
-import catchAsync from 'express-async-handler'
-import jwt from 'jsonwebtoken'
-import User from '../model/userModel.js';
+const catchAsync = require('express-async-handler')
+const jwt = require('jsonwebtoken')
+const User = require('../model/userModel');
 
 // create middleware which will check if user has sent a token , it is not expire and it is valid.
 
@@ -44,4 +44,4 @@ const protect = catchAsync(async (req, res, next) => {
     }
   };
 
-  export {protect, admin}
+  module.exports=  {protect, admin}

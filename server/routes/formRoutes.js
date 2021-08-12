@@ -1,5 +1,5 @@
-import express from 'express'
-import { addFormData, showFormById, showAllForm, DeleteForm } from '../controller/formController.js';
+const express = require('express')
+const { addFormData, showFormById, showAllForm, DeleteForm } = require('../controller/formController');
 const router = express.Router();
 
 
@@ -10,4 +10,4 @@ router.post('/delete/:id', DeleteForm)
 
 
 
-export default router;
+module.exports= router;

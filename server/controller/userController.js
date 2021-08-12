@@ -1,10 +1,10 @@
 
-import AsyncHandel from 'express-async-handler'
-import User from '../model/userModel.js'
-import generateToken from '../utils/generateToken.js';
+const AsyncHandel = require('express-async-handler')
+const User = require('../model/userModel')
+const generateToken = require('../utils/generateToken');
 
 
-export const authUser = AsyncHandel(async(req, res) =>{
+ const authUser = AsyncHandel(async(req, res) =>{
     // parse data from req body
     const {email, password} = req.body;
 
@@ -31,7 +31,7 @@ export const authUser = AsyncHandel(async(req, res) =>{
 //des get User Profile
 // rout get/api/user/profile
 // access private
-export const getUserProfile = AsyncHandel(async(req, res) => {
+ const getUserProfile = AsyncHandel(async(req, res) => {
     const user = User.findById(req.user._id);
     if(user){
         res.json({
@@ -46,7 +46,7 @@ export const getUserProfile = AsyncHandel(async(req, res) => {
     }
 })
 
-export const reisterUser = AsyncHandel(async(req, res)=> {
+const reisterUser = AsyncHandel(async(req, res)=> {
     const {name, email, password} = req.body;
     const userExist = await User.findOne({email});
     if(userExist){
@@ -76,7 +76,7 @@ if(user){
 
 
 
-export const admins = AsyncHandel(async(req, res) =>{
+ const admins = AsyncHandel(async(req, res) =>{
     // parse data from req body
     const {email, password} = req.body;
 
@@ -99,3 +99,4 @@ export const admins = AsyncHandel(async(req, res) =>{
     }
     
 })
+module.exports= {admins,reisterUser,getUserProfile, authUser}

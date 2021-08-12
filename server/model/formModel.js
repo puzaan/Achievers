@@ -1,5 +1,5 @@
 
-import Mongoose  from "mongoose";
+const Mongoose  =require( "mongoose");
 
 
 const formSchema = Mongoose.Schema({
@@ -36,4 +36,4 @@ default: Date.now
 
 )
 const FormData = Mongoose.model('FormData', formSchema)
-export default FormData
+module.exports=  FormData

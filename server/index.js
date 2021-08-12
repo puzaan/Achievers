@@ -1,16 +1,17 @@
-import express from 'express'
-import cors from 'cors'
-import connectDB from './database/db.js';
-import dotenv from 'dotenv'
-import color from 'colors'
-import formRoutes from './routes/formRoutes.js'
-import userRoutes from './routes/userRoutes.js'
-import {notFound, errorHandler} from './middleware/errorMiddleware.js'
+const express = require('express')
+const cors = require('cors')
+const connectDB =require('./database/db');
+const dotenv = require('dotenv');
+const color =('colors')
+const formRoutes =require('./routes/formRoutes')
+const userRoutes = require('./routes/userRoutes')
+const {notFound, errorHandler} =require ('./middleware/errorMiddleware')
 
 dotenv.config()
 connectDB();
 
 const app = express();
+
 
 
 app.use(cors());

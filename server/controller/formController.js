@@ -1,5 +1,5 @@
-import catcAsync from 'express-async-handler'
-import FormData from '../model/formModel.js'
+const catcAsync = require('express-async-handler')
+const FormData = require('../model/formModel.js')
 
 const addFormData = catcAsync(async(req, res) => {
     try {
@@ -85,4 +85,4 @@ const DeleteForm = catcAsync(async(req, res)=> {
     }
 })
 
-export {addFormData, showFormById, showAllForm, DeleteForm};
+module.exports= {addFormData, showFormById, showAllForm, DeleteForm};
