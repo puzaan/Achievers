@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Typography, } from "@material-ui/core";
 import { DataGrid } from '@material-ui/data-grid';
-import { formLists } from "../../action/FormDetailAction";
+import { formLists, formRemove } from "../../action/FormDetailAction";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
 import Loder from 'views/Loder';
 import Alerts from 'views/Alert/Alert';
 import { makeStyles } from "@material-ui/styles";
+import { isDebuggerStatement } from "typescript";
 
 const useStyle = makeStyles(() => ({
     userListEdit: {
@@ -20,7 +21,7 @@ const useStyle = makeStyles(() => ({
     },
 }))
 
-const FormDetail = ({ history }) => {
+const FormDetail = ({ history, match}) => {
 
     const classes = useStyle();
     const columns = [
@@ -79,11 +80,15 @@ const FormDetail = ({ history }) => {
             width: 140,
             renderCell: (params) => {
                 return (
+                    <div>
                    
                         <Link to={`/form/${params.row._id}`}>
                             <button className={classes.userListEdit}>View</button>
                         </Link>
-                   
+                        {/* <DeleteIcon 
+                        onClick={handleDelete}
+                        /> */}
+                   </div>
                 );
             },
         },
@@ -95,14 +100,18 @@ const FormDetail = ({ history }) => {
     const formList = useSelector((state) => state.formList);
     const { loding, error, lists } = formList;
     
-    
+    const formDelete = useSelector((state) => state.formDelete);
+    const {success} = formDelete
     useEffect(() => {
 
         if (!userInfo) {
             history.push("/");
         }
         dispatch(formLists());
-    }, [dispatch]);
+    }, [dispatch, success]);
+    
+ 
+
 
     return (
         <div>

@@ -52,15 +52,15 @@ export const formDetails = (id) => async (dispatch) => {
     }
 };
 
-export const formRemove = (id) => async (dispatch) => {
+export const formRemove = (id) => async (dispatch, getState) => {
     try {
         dispatch({ type: FORM_DELETE_REQUEST });
-        const { data } = await axios.delete(
+        await axios.delete(
             `http://localhost:5000/api/form/delete/${id}`
         );
         dispatch({
             type: FORM_DELETE_SUCCESS,
-            payload: data,
+
         });
     } catch (error) { 
         dispatch({

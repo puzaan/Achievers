@@ -6,7 +6,7 @@ const router = express.Router();
 router.post('/add', addFormData );
 router.get('/showBy/:id', showFormById);
 router.get('/show', showAllForm);
-router.post('/delete/:id', DeleteForm)
+router.delete('/delete/:id', DeleteForm)
 
 
 

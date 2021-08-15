@@ -39,7 +39,7 @@ export const formDetailReducer = (state = { form: { course: [] } }, action) => {
 export const formDeleteReducer = (state = {}, action) => {
     switch (action.type) {
         case FORM_DELETE_REQUEST:
-            return { loading: true, ...state };
+            return { loading: true};
         case FORM_DELETE_SUCCESS:
             return { loading: false, success: true};
         case FORM_DELETE_FAIL:

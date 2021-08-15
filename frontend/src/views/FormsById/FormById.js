@@ -40,19 +40,22 @@ const FormById = ({history, match}) => {
     const formById = useSelector((state) => state.formById);
     const {form} = formById;
     const formDelete = useSelector((state) => state.formDelete);
+    const {success} = formDelete
     useEffect(() => {
       if (!userInfo) {
         history.push("/");
     }
         dispatch(formDetails(match.params.id));
-    }, [dispatch, match.params.id]);
+    }, [dispatch, match.params.id, success]);
 
     const goBack = (e) => {
       history.push("/form");
     };
-    const deletets = () => {
+    const deletets = (id) => {
       
-      console.log('delete form data')
+     dispatch(formRemove(match.params.id))
+     history.push("/form");
+      
     }
     return (
         <div >

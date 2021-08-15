@@ -75,7 +75,7 @@ const showAllForm = catcAsync(async(req, res) => {
 const DeleteForm = catcAsync(async(req, res)=> {
     const form = await FormData.findById(req.params.id);
     if(form){
-        const remove = await form.remove();
+        await form.remove();
         res.json({
             message: 'File deleted',
         })
