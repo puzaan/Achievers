@@ -85,9 +85,6 @@ const FormDetail = ({ history, match}) => {
                         <Link to={`/form/${params.row._id}`}>
                             <button className={classes.userListEdit}>View</button>
                         </Link>
-                        {/* <DeleteIcon 
-                        onClick={handleDelete}
-                        /> */}
                    </div>
                 );
             },
@@ -110,13 +107,13 @@ const FormDetail = ({ history, match}) => {
         dispatch(formLists());
     }, [dispatch, success]);
     
- 
+  
 
 
     return (
         <div>
     
-            <div style={{ height: 400, width: "95%", padding: "20px" }}>
+            <div style={{ height: 400, padding: "20px" }}>
                 <Typography variant="h4"> All User Forms</Typography>
                 {error && <Alerts severity="error"> {error}</Alerts>}
                 {loding && <Loder />}
