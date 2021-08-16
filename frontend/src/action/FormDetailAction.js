@@ -102,3 +102,31 @@ export const adminFormLists = () => async (dispatch, getState) => {
         });
     }
 };
+
+
+export const adminFormDetails = (id) => async (dispatch, getState) => {
+    try {
+        dispatch({ type: FORM_DETAIL_ID_REQUEST });
+        const {userLogin: {userInfo},} = getState();
+        const config = {
+            headers: {
+                Authorization : `Bearer ${userInfo.token}`,
+            }
+        }
+        const { data } = await axios.get(
+            `http://localhost:5000/api/form/admin/showBy/${id}`, config
+        );
+        dispatch({
+            type: FORM_DETAIL_ID_SUCESS,
+            payload: data,
+        });
+    } catch (error) { 
+        dispatch({
+            type: FORM_DETAIL_ID_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        })
+    }
+};

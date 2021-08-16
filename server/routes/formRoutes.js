@@ -6,6 +6,7 @@ const {protect, admin} = require('../middleware/auth')
 
 router.post('/add', addFormData );
 router.get('/showBy/:id', showFormById);
+router.get('/admin/showBy/:id', protect, admin, showFormById);
 router.get('/show', showAllForm);
 router.get('/admin/show', protect,admin,showAllForm);
 router.delete('/delete/:id', DeleteForm)

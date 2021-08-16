@@ -58,8 +58,10 @@ const VideoSection = props => {
           <Grid container spacing={2} alignItems="flex-start">
             <Grid item xs={12}>
               <SectionHeader
-                title="We proactively consult, design, develop & scale robust web, mobile & custom software solutions, that fuel innovation & deliver digital success!"
-                subtitle="At Unified we believe that every project is an important milestone in our journey. So we position ourselves as a boutique digital agency, custom tailoring impactful digital solutions with industry best practices across the board, for Fortune 500's, SMEs, and Start-up’s around the globe."
+                title="We have recently conducted Machine learning workshops from the experience  machine learning engineers from the global market ;
+                (keeping the video of the machine learning workshop).
+                "
+                subtitle="Artificial Intelligence (AI), Data Science (DS), and Machine Learning (ML) are the pillars of the Fourth Industrial Revolution, or what is commonly known as Industry 4.0. AI is a branch of Computer Science that deals with the ability of a machine to closely imitate intelligent human behavior. ML is an application of AI that is based on the idea that when machines are provided new data, they can learn, grow, and develop on their own without explicit human intervention/programming."
                 ctaGroup={[
                   <Button
                     variant="contained"
@@ -75,7 +77,8 @@ const VideoSection = props => {
                 disableGutter
               />
             </Grid>
-            <Grid item xs={12}>
+
+            {/* <Grid item xs={12}>
               <Grid container spacing={2} data-aos="fade-up">
                 <Grid item xs={12}>
                   <Typography
@@ -108,12 +111,14 @@ const VideoSection = props => {
                 </Grid>
               </Grid>
             </Grid>
+         
+          */}
           </Grid>
         </Grid>
         <Grid item xs={12} md={6} data-aos={'fade-up'}>
           <Grid container justify="center">
             
-            <ReactPlayer url='https://www.youtube.com/watch?v=UNCq01LNNrg'
+            <ReactPlayer url='https://www.youtube.com/watch?v=lfZW0JmQiks'
             controls 
           
             className={classes.videoIframe}

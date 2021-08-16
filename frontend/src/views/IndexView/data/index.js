@@ -195,27 +195,22 @@ export const process = [
 
 export const quikeStart = [
   {
-    end:'10',
+    end:'100',
     suffix:'+',
     lable:'Placement',
 
   },
   {
-    end:'150',
+    end:'5',
     suffix:'+',
     lable:'Technology export',
     
   },
+
   {
-    end:'1500',
+    end:'10',
     suffix:'+',
-    lable:'Solution Deleverd',
-    
-  },
-  {
-    end:'50',
-    suffix:'+',
-    lable:'Raised by out client',
+    lable:'Clients',
     
   },
   

@@ -13,6 +13,7 @@ import {
 
 
 } from './data';
+import {page} from '../CourseDetail/data'
 const useStyles = makeStyles(() => ({
   sectionAlternateNoPaddingTop: {
     '& .section-alternate__content': {
@@ -45,7 +46,7 @@ const IndexView = ({ themeMode }) => {
         <Features />
       </SectionAlternate> */}
       <Section>
-        <AskExpert />
+        <AskExpert/>
       </Section>
       <Section>
         <Work data={work} />
@@ -54,7 +55,7 @@ const IndexView = ({ themeMode }) => {
         <Divider />
       </Section>
       <Section className={classes.dividerSection}>
-      <Categories data={courseCategories} />
+      <Categories data={page} />
       </Section>
       <Section narrow>
         <Process data={process} />

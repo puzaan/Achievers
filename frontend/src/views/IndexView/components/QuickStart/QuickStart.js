@@ -62,7 +62,7 @@ const QuickStart =  props => {
           <Grid container justify="space-between" spacing={isMd ? 4 : 2}>
             <Grid item xs={12} md={12} data-aos={'fade-right'}>
               <SectionHeader
-                title="Your technology partner for innovative and impactful digital solutions."
+                title="Achievers Groups Portfolio:"
                 align={isMd ? 'left' : 'center'}
                 disableGutter
                 titleVariant="h3"

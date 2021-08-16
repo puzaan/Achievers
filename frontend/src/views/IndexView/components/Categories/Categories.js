@@ -33,7 +33,7 @@ const Categories = props => {
         fadeUp
       />
       <Grid container spacing={isMd ? 4 : 2}>
-        {data.map((item, index) => (
+        {data.traning.children.course.pages.map((item, index) => (
           <Grid
           className={classes.color}
             key={index}
@@ -52,8 +52,8 @@ const Categories = props => {
               align={isMd ? 'left' : 'center'}
               liftUp
               title={item.title}
-              subtitle={item.subtitle}
-              href="#"
+              subtitle={item.duration}
+              href={`/course-detail/${item.id}`}
               fontIconClass={item.icon}
               color= 'primary'
               

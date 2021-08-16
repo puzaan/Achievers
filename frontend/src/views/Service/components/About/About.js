@@ -72,7 +72,7 @@ const About = props => {
       <SectionHeader
       className = {classes.headerSection}
         title="Web and Mobile Software Development Services"
-        subtitle="A successful offshore software application development company since 1997, providing a full range of website and mobile app development, games development, IoT, AR-VR and other IT services and solutions globally."
+        subtitle="A successful AchieversGroups software application development company, providing a full range of website and mobile app development,and other IT services and solutions globally."
       />
       
       <Grid container justify="center">

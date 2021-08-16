@@ -94,13 +94,14 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
 
   const title = (
     <Typography variant="h2" component="span" className={classes.fontWeight900}>
-      Enterprise Software Development
+      Software company and Software Training partner .
+
       <br />
       <TypedText
         component="span"
         variant="h2"
         color="secondary"
-        
+        className={classes.fontWeight900}
         typedProps={{
           strings: [
             'Enhancing business agility',
@@ -116,7 +117,7 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
     </Typography>
   );
 
-  const subtitle = 'Achieverss Groups will make your product look modern and professional while saving you precious time.';
+  const subtitle = 'Helping the freshers to grow in Software industry';
 
   const redButton = (
 <Button

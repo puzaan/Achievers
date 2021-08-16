@@ -7,15 +7,16 @@ import { SectionHeader, IconAlternate } from 'components/molecules';
 import { DescriptionListIcon } from 'components/organisms';
 
 
+
 const data = [{
-  title:'Investing made easy',
-  subtitle:'Three simple options- cautions, balanced, adventurous. Expert will take care of rest!',
-  icon: "fas fa-comment-dollar"
+  title:'Take a demo class:',
+  subtitle:'We are continuously providing demo classes in the different programs so that trainers can know the way we train our freshers.',
+  icon: "fab fa-youtube"
 },
 {
-  title:'Schedule a meeting',
-  subtitle:'Expert will give you the best advice. Schedule a meeting with the expert to know mutual funds better.',
-  icon: "far fa-calendar-alt"
+  title:'Schedule counseling',
+  subtitle:'If you are not clear in your interest and want to make clear in it . We are here to provide free counseling for you.',
+  icon: "far fa-calendar-check"
 }
 ]
 
@@ -34,8 +35,8 @@ const AskExpert = props => {
         <Grid item container alignItems="center" xs={12} md={6}>
           <div>
             <SectionHeader
-              title="Ask the Expert"
-              subtitle="You can schedule a meeting with an expense manager"
+              title="Involve in Our Career Accelerating programs :"
+              // subtitle="You can schedule a meeting with an expense manager"
               align="left"
               data-aos="fade-up"
             />
