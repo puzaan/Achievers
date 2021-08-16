@@ -23,7 +23,7 @@ export const login = (email, password) => async (dispatch) => {
         // save user info into local storage name as usnerInfo
         localStorage.setItem("userInfo", JSON.stringify(data));
         //to save token only
-        localStorage.setItem("token", JSON.stringify(data.token));
+        //localStorage.setItem("token", JSON.stringify(data.token));
     } catch (err) {
         dispatch({
             type: USER_LOGIN_FAIL,
@@ -38,7 +38,7 @@ export const login = (email, password) => async (dispatch) => {
 // remove item from localStorage
 export const logout = () => async (dispatch) => {
     localStorage.removeItem("userInfo");
-    localStorage.removeItem("token");
+    
     dispatch({
         type: USER_LOGIN_LOGOUT,
     });

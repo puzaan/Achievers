@@ -10,6 +10,7 @@ import {
     FORM_DETAIL_REQUEST,
     FORM_DETAIL_SUCESS,
 } from "../constants/FormDetailConstants";
+import {logout} from './userAction'
 
 export const formLists = () => async (dispatch) => {
     try {
@@ -70,5 +71,34 @@ export const formRemove = (id) => async (dispatch, getState) => {
                     ? error.response.data.message
                     : error.message,
         })
+    }
+};
+
+
+export const adminFormLists = () => async (dispatch, getState) => {
+    try {
+        dispatch({ type: FORM_DETAIL_REQUEST });
+        const {userLogin: {userInfo},} = getState();
+
+        const config = {
+            headers: {
+              Authorization: `Bearer ${userInfo.token}`,
+            },
+          };
+
+        const { data } = await axios.get(`http://localhost:5000/api/form/admin/show`, config);
+
+        dispatch({
+            type: FORM_DETAIL_SUCESS,
+            payload: data,
+        });
+    } catch (error) {
+        dispatch({
+            type: FORM_DETAIL_FAIL,
+            payload:
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message,
+        });
     }
 };

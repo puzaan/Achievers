@@ -48,3 +48,17 @@ export const formDeleteReducer = (state = {}, action) => {
             return state;
     }
 };
+
+
+export const adminFormListReducer = (state = { lists: [] }, action) => {
+    switch (action.type) {
+        case FORM_DETAIL_REQUEST:
+            return { loding: true, lists: [] };
+        case FORM_DETAIL_SUCESS:
+            return { loding: false, lists: action.payload };
+        case FORM_DETAIL_FAIL:
+            return { loding: false, error: action.payload };
+        default:
+            return state;
+    }
+};

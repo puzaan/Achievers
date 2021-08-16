@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Typography, } from "@material-ui/core";
 import { DataGrid } from '@material-ui/data-grid';
-import { formLists, formRemove } from "../../action/FormDetailAction";
+import { formLists, formRemove , adminFormLists} from "../../action/FormDetailAction";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
 import Loder from 'views/Loder';
@@ -94,18 +94,20 @@ const FormDetail = ({ history, match}) => {
     const userLogin = useSelector((state) => state.userLogin);
     const { userInfo } = userLogin;
 
-    const formList = useSelector((state) => state.formList);
-    const { loding, error, lists } = formList;
+    const adminFormList = useSelector((state) => state.adminFormList);
+    const { loding, error, lists } = adminFormList;
     
-    const formDelete = useSelector((state) => state.formDelete);
-    const {success} = formDelete
+    // const formDelete = useSelector((state) => state.formDelete);
+    // const {success} = formDelete
     useEffect(() => {
 
-        if (!userInfo) {
-            history.push("/");
+        if (userInfo && userInfo.isAdmin) {
+            dispatch(adminFormLists());
+        }else{
+            history.push('/')
         }
-        dispatch(formLists());
-    }, [dispatch, success]);
+        
+    }, [dispatch, history]);
     
   
 

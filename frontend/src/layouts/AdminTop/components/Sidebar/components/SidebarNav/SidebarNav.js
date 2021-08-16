@@ -73,8 +73,6 @@ const SidebarNav = props => {
         </Typography>
         
       </ListItem>
-
-
       <ListItem className={classes.listItem}>
         <Typography variant="h6" color="textPrimary" gutterBottom
         component={Link}
