@@ -22,6 +22,7 @@ import {
   Form as FormDetails,
   FormByIds as FormDetailsById,
   DemoClass as DemoClass,
+Counseling as Couselling,
 } from './views';
 
 const Routes = () => {
@@ -57,6 +58,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={DemoClass}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path={`/counselling`}
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={Couselling}
             layout={MainLayout}
           />
         )}

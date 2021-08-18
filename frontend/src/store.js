@@ -5,6 +5,7 @@ import { enrollReducer } from './reducers/enrollReducers';
 import { userLoginReducer } from 'reducers/userReducers';
 import { formDeleteReducer, formDetailReducer, formListReducer, adminFormListReducer} from 'reducers/FormDetailsReducer';
 import { createDemoReducer } from 'reducers/demoClassReducers';
+import { createCounseling } from 'reducers/counselingReduucer';
 
 
 const reducer = combineReducers({
@@ -14,7 +15,8 @@ const reducer = combineReducers({
     formById: formDetailReducer,
     formDelete: formDeleteReducer,
     adminFormList: adminFormListReducer,
-    DemoClass: createDemoReducer
+    DemoClass: createDemoReducer,
+    counseling: createCounseling
 
 });
 const userInfoFromStore = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null

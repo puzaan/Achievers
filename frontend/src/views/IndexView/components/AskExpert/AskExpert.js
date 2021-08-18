@@ -18,7 +18,7 @@ const data = [{
   title:'Schedule counseling',
   subtitle:'If you are not clear in your interest and want to make clear in it . We are here to provide free counseling for you.',
   icon: "far fa-calendar-check",
-  link:'/'
+  link:'/counselling'
 }
 ]
 

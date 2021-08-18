@@ -21,7 +21,7 @@ const Reviews = props => {
   React.useEffect(() => {
     new Swiper('.swiper-container', {
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 15,
       pagination: {
         el: '.swiper-container .swiper-pagination',
         type: 'bullets',
