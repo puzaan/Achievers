@@ -1,99 +1,67 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Button, Typography,} from '@material-ui/core';
-import { Image } from 'components/atoms';
+import clsx from 'clsx';
+import Swiper from 'swiper';
+import { makeStyles } from '@material-ui/core/styles';
+import { colors } from '@material-ui/core';
 import { SectionHeader, IconAlternate } from 'components/molecules';
 import { CardReview } from 'components/organisms';
 
-const useStyles = makeStyles(() => ({
-  sectionHeadlineStars: {
-    maxWidth: 120,
+const useStyles = makeStyles(theme => ({
+  swiperContainer: {
+    width: '100%',
+    maxWidth: 600,
   },
-  color:{
-    color:'#013220'
-  },
-
-btn: {
-  background: '#013220',
-  borderRadius: 3,
-  border: 0,
-  color: 'white',
-  height: 48,
-  padding: '0 30px',
-  '&:hover': {
-    background: 'black',
-    color: 'white'
-
-  }
-  
-},
 }));
 
 const Reviews = props => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
+  React.useEffect(() => {
+    new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-container .swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 8000,
+      },
+    });
   });
 
   return (
-    <div className={className} {...rest}>
+    <div className={className} data-aos="fade-up" {...rest}>
       <SectionHeader
-        overline={
-          <Image
-            src="https://assets.maccarianagency.com/the-front/illustrations/rated-by-our-customer.png"
-            alt="rating"
-            className={classes.sectionHeadlineStars}
-            width="auto"
-          />
-        }
-        title={
-          <span>
-            <Typography component="span" variant="inherit" color="secondary" >Rated 5 out of 5</Typography>{' '}
-            stars by our customers!
-          </span>
-        }
-        subtitle="Companies from across the globe have had fantastic experiences using TheFront. Here’s what they have to say."
-        fadeUp
+        title="Students Review"
+        subtitle="Take a quick glance at some of our student response."
       />
-      <Grid container spacing={isMd ? 4 : 2}>
-        {data.map((review, index) => (
-          <Grid
-            key={index}
-            item
-            container
-            alignItems="center"
-            direction="column"
-            xs={12}
-            sm={12}
-            md={4}
-            data-aos="fade-up"
-          >
+      <div className={clsx('swiper-container', classes.swiperContainer)}>
+        <div className="swiper-wrapper">
+          {data.map((item, index) => (
             <CardReview
-              variant="outlined"
-              text={review.feedback}
-              icon={
-                <IconAlternate
-                  color='colors.green'
-                  fontIconClass="fas fa-quote-right"
-                  
-                />
-              }
-              authorName={review.authorName}
-              authorTitle={review.authorOccupation}
-              authorPhoto={review.authorPhoto}
+              key={index}
+              className={'swiper-slide'}
+              noBorder
+              noShadow
+              text={item.review}
+              // icon={
+              //   <IconAlternate
+              //     color={colors.indigo}
+              //     fontIconClass="fas fa-quote-right"
+              //   />
+              // }
+              authorName={item.name}
+              authorTitle={` Enrolled in: ${item.enroll}`}
+              authorPhoto={item.authorPhoto}
             />
-          </Grid>
-        ))}
-        <Grid item container xs={12} justify="center">
-          <Button variant="outlined" size="large" color="primary" >
-            See all reviews
-          </Button>
-        </Grid>
-      </Grid>
+          ))}
+        </div>
+        <div className="swiper-pagination" />
+      </div>
     </div>
   );
 };

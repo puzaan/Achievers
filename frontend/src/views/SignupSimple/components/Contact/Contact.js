@@ -72,7 +72,7 @@ const Contact = props => {
                 </ListItemAvatar>
                 <ListItemText
                   primary="Email"
-                  secondary="chievergroups@gmail.com/"
+                  secondary="achievergroups@gmail.com/"
                   primaryTypographyProps={{
                     variant: 'subtitle1',
                     color: 'textSecondary',

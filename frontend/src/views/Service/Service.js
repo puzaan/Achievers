@@ -21,7 +21,7 @@ import {
   integrations,
   customizations,
 } from './data';
-
+import {response} from '../IndexView/data'
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
     paddingTop: theme.spacing(3),
@@ -99,7 +99,7 @@ const Service = () => {
         <Section>
           <Divider />
         </Section>
-        <Reviews data={reviews} />
+        <Reviews data={response} />
         </>
       </Section>
       <Divider />

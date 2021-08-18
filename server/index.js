@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 const color =('colors')
 const formRoutes =require('./routes/formRoutes')
 const userRoutes = require('./routes/userRoutes')
+const counselingRoutes = require('./routes/counselingRoutes')
+const demoScedualRoutes = require('./routes/demoScedualRoutes');
 const {notFound, errorHandler} =require ('./middleware/errorMiddleware')
 
 dotenv.config()
@@ -21,8 +23,10 @@ app.use(express.urlencoded())
 app.get('/', (req, res)=> {
     res.send('server is running')
 })
-app.use('/api/form', formRoutes)
-app.use('/api/users', userRoutes)
+app.use('/api/form', formRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/counseling', counselingRoutes);
+app.use('/api/scedual', demoScedualRoutes);
 app.use(notFound);
 app.use(errorHandler);
 const port = process.env.PORT || 5000

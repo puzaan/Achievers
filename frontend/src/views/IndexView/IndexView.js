@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, Divider } from '@material-ui/core';
 import { Section, SectionAlternate } from 'components/organisms';
-import {  Features,  QuickStart,  Hero , AskExpert,Works, VideoSection, Categories, Reviews, Work, Process} from './components';
+import {  Features,  QuickStart,  Hero , AskExpert,Works, VideoSection, Categories, Reviews, Work, Process, Articles} from './components';
 import {
   courseCategories,
   partners,
@@ -9,7 +9,9 @@ import {
   workReviews,
   work,
   process,
-  quikeStart
+  quikeStart,
+  response,
+  articles
 
 
 } from './data';
@@ -61,8 +63,9 @@ const IndexView = ({ themeMode }) => {
         <Process data={process} />
       </Section>
       <Section>
-      <Reviews data={reviews} />
+      <Reviews data={response} />
       </Section>
+      
 
     </div>
   );

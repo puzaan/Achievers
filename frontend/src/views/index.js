@@ -10,3 +10,4 @@ export { default as SignIn } from './SignUp';
 export {default as Dashboard} from './Dashboard'
 export {default as Form} from './Forms'
 export {default as FormByIds} from './FormsById'
+export {default as DemoClass} from './DemoClass'

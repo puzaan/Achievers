@@ -7,7 +7,7 @@ export const EnrollForm = (fullName, email,phone,education ,college, message, co
         dispatch({
             type: ENROLL_CREATE_REQUEST
         });
-        const {data} = await axios.post('http://localhost:5000/api/form/add', {
+        const {data} = await axios.post('http://13.233.151.81:5000/api/form/add', {
             fullName, email,phone,education ,college, message, course
         })
             

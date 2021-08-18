@@ -5,20 +5,23 @@ import { useMediaQuery, Grid, Button } from '@material-ui/core';
 import { Image } from 'components/atoms';
 import { SectionHeader, IconAlternate } from 'components/molecules';
 import { DescriptionListIcon } from 'components/organisms';
-
+import {Link} from 'react-router-dom'
 
 
 const data = [{
-  title:'Take a demo class:',
+  title:'Take a demo class',
   subtitle:'We are continuously providing demo classes in the different programs so that trainers can know the way we train our freshers.',
-  icon: "fab fa-youtube"
+  icon: "fab fa-youtube",
+  link:'/demoClass'
 },
 {
   title:'Schedule counseling',
   subtitle:'If you are not clear in your interest and want to make clear in it . We are here to provide free counseling for you.',
-  icon: "far fa-calendar-check"
+  icon: "far fa-calendar-check",
+  link:'/'
 }
 ]
+
 
 const AskExpert = props => {
   const { className, ...rest } = props;
@@ -35,7 +38,7 @@ const AskExpert = props => {
         <Grid item container alignItems="center" xs={12} md={6}>
           <div>
             <SectionHeader
-              title="Involve in Our Career Accelerating programs :"
+              title="Involve in Our Career Accelerating programs"
               // subtitle="You can schedule a meeting with an expense manager"
               align="left"
               data-aos="fade-up"
@@ -56,6 +59,7 @@ const AskExpert = props => {
                   align="left"
                 />
                 <div style={{ flexGrow: 1 }} />
+                <Link to = {data.link} style={{ textDecoration: 'none'}}>
                 <Button
                   variant="contained"
                   color="primary"
@@ -64,6 +68,8 @@ const AskExpert = props => {
                 >
                   Contact us
                 </Button>
+                </Link>
+                
               </Grid>
               
               ))}

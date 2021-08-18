@@ -20,7 +20,8 @@ import {
   SignIn,
   Dashboard,
   Form as FormDetails,
-  FormByIds as FormDetailsById
+  FormByIds as FormDetailsById,
+  DemoClass as DemoClass,
 } from './views';
 
 const Routes = () => {
@@ -44,6 +45,18 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={EnrollForm}
+            layout={MainLayout}
+          />
+        )}
+      />
+
+<Route
+        exact
+        path={`/demoClass`}
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={DemoClass}
             layout={MainLayout}
           />
         )}

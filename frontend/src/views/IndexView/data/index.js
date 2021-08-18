@@ -138,7 +138,7 @@ export const workReviews = [
   {
     authorPhoto: {
       src: 'https://www.unifiedinfotech.net/assets/images/new-home/eshipper-portfolio@1.5x.jpg',
-      srcSet: 'https://www.unifiedinfotech.net/assets/images/new-home/eshipper-portfolio@1x.jpg',
+      srcSet: 'https://www.unifiedinfotech.net/assets/images/new-home/eshipper-portfolio@1.5x.jpg',
     },
     authorName: `Website Re-design for one of the canada's leading shipping company during the COVID-19 `,
     authorOccupation: 'We were hired to help eShipper create a brand-new website which shall enable them to convert more of the huge amount of traffic they already received and improve their brand perception. Through a data and research driven process, we created a modern website which resulted in 3x leads and 4x subscriptions just 2 months post its launch.',
@@ -214,4 +214,117 @@ export const quikeStart = [
     
   },
   
+];
+
+
+export const response = [
+  {
+    name: 'Bidur parajuli',
+    enroll: "React",
+    review:"Currently, I enroll in Advanced react with modern react course in Achiever groups . The way of learning process is so   benefitted . Specially  access of LMS  credentials  help us to much for submitting assignment, recording video of of classes, discussion forum where we all participants can discuss about any course content. And after completion of course internship and job opportunities  from Achiever groups. Achiever groups is a good platform to build our professional career. "
+  },
+  {
+    name: 'Pradip Paudel',
+    enroll: "React",
+    review:"Awesome, we  are gaining deep knowledge  in JavaScript and hope we will get more then this on React also. The very best part of this group is the way and technique of teaching as well as this LMS software which is using by this group is also very good and another best part is this group is developing the community of all students and developer of this institute which will be so helpful in future also."
+  },
+  {
+    name: 'Bidur parajuli',
+    enroll: "React",
+    review:"Currently, I enroll in Advanced react with modern react course in Achiever groups . The way of learning process is so   benefitted . Specially  access of LMS  credentials  help us to much for submitting assignment, recording video of of classes, discussion forum where we all participants can discuss about any course content. And after completion of course internship and job opportunities  from Achiever groups. Achiever groups is a good platform to build our professional career. "
+  },
+  {
+    name: 'Sujan chhengutala',
+    enroll: "React",
+    review:"Definitely one of the best programming courses. Challenging yet beginner friendly. Instructor explains every concept with passion and care. The assignments are difficult and interesting and more importantly, the assignment teaches the core of programming. I haven't finished so far, but I can't wait to give it a 5-star review. I really appreciate Achiver groups putting this course online. This course makes the world a better place!"
+  },
+  {
+    name: 'Raj Chaulagain',
+    enroll: "Flutter",
+    review:"Achiever has implemented assignment and project led teaching-learning approach, which has personally helped me to learn new things fast. Teachers are supportive and friendly which made the experience here more enhancd. I must say that i am really impressed with how well integrated LMS is. Congratulations to the development team of LMS."
+  },
+  {
+    name: 'Piyush Yadav',
+    enroll: "Flutter",
+    review:"I got enrolled in flutter development class and had an amazing experience through the teaching faculty. "
+  },
+  {
+    name: 'Salin Thapa',
+    enroll: "Flutter",
+    review:"The flutter classes are very useful and interesting. Our flutter sir is also very helpful friendly and is always ready to help."
+  },
+  {
+    name: 'Utsav Gole',
+    enroll: "Flutter",
+    review:""
+  },
+  {
+    name: 'Kunjan Rajbhandari',
+    enroll: "Flutter",
+    review:"I have been studying in Achiever Group two months. Achiever Group is a great experience for me. All teachers and staff are professional, helpful, kind and friendly. I am lucky to be in Achiever Group. If you think to learn Flutter-Complete Application Development you should come Achiever Group."
+  },
+  {
+    name: 'Santosh Nepal',
+    enroll: "React",
+    review:"Contact information and location of the institute can be provided in the site,Some word from  Alumnus should be added to the site and some words from the company head where the Alumnus work can also be added ."
+  }
+]
+
+
+
+export const articles = [
+  {
+    cover: {
+      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery1.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery1@2x.jpg 2x',
+    },
+    title: 'Increasing Prosperity With Positive Thinking',
+    author: 'By Maria Stone',
+    date: '03 March, 2019',
+  },
+  {
+    cover: {
+      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery2.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery2@2x.jpg 2x',
+    },
+    title: 'Motivation Is The First Step To Success',
+    author: 'By Georg Smith',
+    date: '03 March, 2019',
+  },
+  {
+    cover: {
+      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery3.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery3@2x.jpg 2x',
+    },
+    title: 'Success Steps For Your Personal Or Business Life',
+    author: 'By Alex Nesi',
+    date: '03 March, 2019',
+  },
+  {
+    cover: {
+      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery1.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery1@2x.jpg 2x',
+    },
+    title: 'Increasing Prosperity With Positive Thinking',
+    author: 'By Maria Stone',
+    date: '03 March, 2019',
+  },
+  {
+    cover: {
+      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery2.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery2@2x.jpg 2x',
+    },
+    title: 'Motivation Is The First Step To Success',
+    author: 'By Georg Smith',
+    date: '03 March, 2019',
+  },
+  {
+    cover: {
+      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery3.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery3@2x.jpg 2x',
+    },
+    title: 'Success Steps For Your Personal Or Business Life',
+    author: 'By Alex Nesi',
+    date: '03 March, 2019',
+  },
 ];

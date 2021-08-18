@@ -1,39 +1,38 @@
+const Mongoose = require("mongoose");
 
-const Mongoose  =require( "mongoose");
-
-
-const formSchema = Mongoose.Schema({
-    id:{
-type: String,
-required: true,
-default: Date.now
+const formSchema = Mongoose.Schema(
+    {
+        id: {
+            type: String,
+            required: true,
+            default: Date.now,
+        },
+        fullName: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true,
+        },
+        phone: {
+            type: String,
+            required: true,
+        },
+        education: {
+            type: String,
+            required: true,
+        },
+        college: {
+            type: String,
+            required: true,
+        },
+        message: {
+            type: String,
+        },
+        course: [Object],
     },
-    fullName:{
-        type: String,
-        required: true
-    },
-    email:{
-        type: String,
-        required: true
-    },
-    phone:{
-        type: String,
-        required: true
-    },
-    education:{
-        type: String,
-        required: true
-    },
-    college:{
-        type: String,
-        required: true,
-    },
-    message:{
-        type: String,
-    },
-    course:[Object]
-},{ timestamps: true}
-
-)
-const FormData = Mongoose.model('FormData', formSchema)
-module.exports=  FormData
+    { timestamps: true }
+);
+const FormData = Mongoose.model("FormData", formSchema);
+module.exports = FormData;

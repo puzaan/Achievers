@@ -15,7 +15,7 @@ import {logout} from './userAction'
 export const formLists = () => async (dispatch) => {
     try {
         dispatch({ type: FORM_DETAIL_REQUEST });
-        const { data } = await axios.get("http://localhost:5000/api/form/show");
+        const { data } = await axios.get("http://13.233.151.81:5000/api/form/show");
 
         dispatch({
             type: FORM_DETAIL_SUCESS,
@@ -36,7 +36,7 @@ export const formDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: FORM_DETAIL_ID_REQUEST });
         const { data } = await axios.get(
-            `http://localhost:5000/api/form/showBy/${id}`
+            `http://13.233.151.81:5000/api/form/showBy/${id}`
         );
         dispatch({
             type: FORM_DETAIL_ID_SUCESS,
@@ -57,7 +57,7 @@ export const formRemove = (id) => async (dispatch, getState) => {
     try {
         dispatch({ type: FORM_DELETE_REQUEST });
         await axios.delete(
-            `http://localhost:5000/api/form/delete/${id}`
+            `http://13.233.151.81:5000/api/form/delete/${id}`
         );
         dispatch({
             type: FORM_DELETE_SUCCESS,
@@ -86,7 +86,7 @@ export const adminFormLists = () => async (dispatch, getState) => {
             },
           };
 
-        const { data } = await axios.get(`http://localhost:5000/api/form/admin/show`, config);
+        const { data } = await axios.get(`http://13.233.151.81:5000/api/form/admin/show`, config);
 
         dispatch({
             type: FORM_DETAIL_SUCESS,
@@ -114,7 +114,7 @@ export const adminFormDetails = (id) => async (dispatch, getState) => {
             }
         }
         const { data } = await axios.get(
-            `http://localhost:5000/api/form/admin/showBy/${id}`, config
+            `http://13.233.151.81:5000/api/form/admin/showBy/${id}`, config
         );
         dispatch({
             type: FORM_DETAIL_ID_SUCESS,

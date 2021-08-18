@@ -16,11 +16,11 @@ const addFormData = catcAsync(async(req, res) => {
         // })
 
         const createForm = FormData({
-            course: req.body.course,
             fullName: req.body.fullName,
             email: req.body.email,
             phone: req.body.phone,
             education:req.body.education,
+            course: req.body.course,
             college: req.body.college,
             message: req.body.message,
             

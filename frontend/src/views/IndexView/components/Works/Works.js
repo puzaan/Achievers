@@ -93,7 +93,7 @@ const Works = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Our work does the talking"
+        title="Our success Story"
     
       />
       <div className={clsx('swiper-container', classes.swiperContainer)}>
