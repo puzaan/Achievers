@@ -23,6 +23,10 @@ import {
   FormByIds as FormDetailsById,
   DemoClass as DemoClass,
 Counseling as Couselling,
+CounsellingLists as CounsellingLists,
+DemoClassLists as DemoClassLists,
+CounsellingById as CounsellingById,
+DemoClassById as DemoClassById,
 } from './views';
 
 const Routes = () => {
@@ -73,6 +77,7 @@ const Routes = () => {
           />
         )}
       />
+      
 
       <Route
         exact
@@ -189,8 +194,55 @@ const Routes = () => {
           />
         )}
       />
-      
 
+<Route
+        exact
+        path={`/counsellingLists`}
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={CounsellingLists}
+            layout={adminLayout}
+          />
+        )}
+      />
+
+<Route
+        exact
+        path={`/demoClassLists`}
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={DemoClassLists}
+            layout={adminLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path={`/demoClassLists/:id`}
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={DemoClassById}
+            layout={adminLayout}
+          />
+        )}
+      />
+      
+      <Route
+        exact
+        path="/counsellingLists/:id"
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={CounsellingById}
+            layout={adminLayout}
+          />
+        )}
+      />
+      
+      
       <Redirect to="/not-found-cover" />
     </Switch>
   );

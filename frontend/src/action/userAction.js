@@ -12,6 +12,10 @@ export const login = (email, password) => async (dispatch) => {
             type: USER_LOGIN_REQUEST,
         });
         // use for sending email and password
+        // const { data } = await axios.post("http://13.233.151.81:5000/api/users/admin", {
+        //     email,
+        //     password,
+        // });
         const { data } = await axios.post("http://13.233.151.81:5000/api/users/admin", {
             email,
             password,

@@ -18,12 +18,12 @@ const counselingSchema = Mongoose.Schema({
         type: String,
         required: true,
     },
-    counselling:[Object],
-    general:[Object],
+    
     date:{
         type: String,
         required: true,
-    }
+    },
+    topic:[Object]
 
 });
 const counseling = Mongoose.model("CounsellingSchedual", counselingSchema);

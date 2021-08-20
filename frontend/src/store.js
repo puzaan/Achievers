@@ -4,8 +4,8 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import { enrollReducer } from './reducers/enrollReducers';
 import { userLoginReducer } from 'reducers/userReducers';
 import { formDeleteReducer, formDetailReducer, formListReducer, adminFormListReducer} from 'reducers/FormDetailsReducer';
-import { createDemoReducer } from 'reducers/demoClassReducers';
-import { createCounseling } from 'reducers/counselingReduucer';
+import { createDemoReducer,demoClassListReducer, demoClassDetailReducer, demoClassDeleteReducer} from 'reducers/demoClassReducers';
+import { createCounseling, counsellingListReducer, counsellingDetailReducer,counsellingDeleteReducer } from 'reducers/counselingReduucer';
 
 
 const reducer = combineReducers({
@@ -16,7 +16,14 @@ const reducer = combineReducers({
     formDelete: formDeleteReducer,
     adminFormList: adminFormListReducer,
     DemoClass: createDemoReducer,
-    counseling: createCounseling
+    counseling: createCounseling,
+    counsellingList: counsellingListReducer,
+    counsellingDetail: counsellingDetailReducer,
+    counsellingDelete: counsellingDeleteReducer,
+    democlassList: demoClassListReducer,
+    democlassDetail: demoClassDetailReducer,
+    democlassDelete: demoClassDeleteReducer
+
 
 });
 const userInfoFromStore = localStorage.getItem("userInfo") ? JSON.parse(localStorage.getItem("userInfo")) : null

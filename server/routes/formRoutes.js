@@ -10,6 +10,7 @@ router.get('/admin/showBy/:id', protect, admin, showFormById);
 router.get('/show', showAllForm);
 router.get('/admin/show', protect,admin,showAllForm);
 router.delete('/delete/:id', DeleteForm)
+router.delete('/admin/delete/:id',protect,admin, DeleteForm)
 
 
 

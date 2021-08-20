@@ -1,3 +1,6 @@
+
+
+
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
@@ -11,22 +14,12 @@ import { makeStyles } from '@material-ui/styles';
 const useStyle = makeStyles(theme => ({
     root: {
         display: 'flex',
-        minWidth: 160,
+        
     },
-    menu:{
-        minWidth: 160,
-    }
+    
 }));
-export default function Dropdown() {
+export default function NativeSelects() {
     const classes = useStyle();
-    const userLogin = useSelector(state => state.userLogin);
-    const { userInfo } = userLogin;
-    const dispatch = useDispatch();
-
-    const logoutHandler = () => {
-        dispatch(logout());
-    };
-
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = event => {
@@ -40,7 +33,7 @@ export default function Dropdown() {
     return (
         <div className={classes.root}>
             <Button variant="outlined" onClick={handleClick}>
-                {userInfo.name}
+                Schedal 
             </Button>
             <Menu
                 id="simple-menu"
@@ -50,10 +43,12 @@ export default function Dropdown() {
                 onClose={handleClose}
                 className={classes.menu}
             >
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <Link to="/login" style={{ textDecoration: 'none', color: 'black' }}>
-                    <MenuItem onClick={logoutHandler}>Log Out</MenuItem>
-                </Link>{' '}
+                <Link to="/demoClassLists" style={{ textDecoration: 'none', color: 'black' }}>
+                    <MenuItem onClick={handleClose} >Demo Class Schedual</MenuItem>
+                </Link>
+                <Link to="/counsellingLists" style={{ textDecoration: 'none', color: 'black' }}>
+                    <MenuItem onClick={handleClose} >Counselling Schedual</MenuItem>
+                </Link>
             </Menu>
         </div>
     );

@@ -32,14 +32,9 @@ const generateToken = require('../utils/generateToken');
 // rout get/api/user/profile
 // access private
  const getUserProfile = AsyncHandel(async(req, res) => {
-    const user = User.findById(req.user._id);
+    const user = await User.findById(req.params.id);
     if(user){
-        res.json({
-            _id: user._id,
-            name: user.name,
-            email: user.email,
-            isAdmin: user.isAdmin,
-          });
+        res.json(user);
     }else{
         res.status(404);
         throw new Error('User belong to tis token is no longer exist')
@@ -99,4 +94,10 @@ if(user){
     }
     
 })
-module.exports= {admins,reisterUser,getUserProfile, authUser}
+
+const alluser= AsyncHandel(async(req, res) => {
+    let list = await User.find({});
+    res.json(list);
+})
+
+module.exports= {admins,reisterUser,getUserProfile, authUser,alluser}

@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Typography, } from "@material-ui/core";
 import { DataGrid } from '@material-ui/data-grid';
-import { formRemove , adminFormLists} from "../../action/FormDetailAction";
+import { DemoClasslist} from "action/demoClassAction";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
 import Loder from 'views/Loder';
 import Alerts from 'views/Alert/Alert';
 import { makeStyles } from "@material-ui/styles";
+import {logout} from 'action/userAction'
+
 
 const useStyle = makeStyles(() => ({
     userListEdit: {
@@ -20,59 +22,39 @@ const useStyle = makeStyles(() => ({
     },
 }))
 
-const FormDetail = ({ history, match}) => {
+const DemoClassLists = ({ history, match}) => {
 
     const classes = useStyle();
     const columns = [
-        // { field: "_id", headerName: "ID", width: 90, hide: true},
         {
-            field: "fullName",
+            field: "name",
             headerName: "Name",
-            width: 140,
+            width: 180,
         },
         {
             field: "email",
             headerName: "Email",
             sortable: false,
-            width: 160,
+            width: 180,
         },
         {
-            field: "phone",
+            field: "number",
             headerName: "Contact No",
             sortable: false,
-            width: 120,
-        },
-        {
-            field: "education",
-            headerName: "Education",
-            width: 140,
-            sortable: false,
-        },
-        {
-            field: "createdAt",
-            headerName: "Date",
-            width: 170,
+            width: 160,
         },
         {
             field: "course",
-            headerName: "Course To Enroll",
+            headerName: "Course ",
+            width: 200,
             sortable: false,
-            width: 160,
         },
-
         {
-            field: "college",
-            headerName: "Collage Name",
-            sortable: false,
-            width: 160,
+            field: "date",
+            headerName: "Schedual For",
+            width: 200,
         },
-
-        {
-            field: "message",
-            headerName: "Messages",
-            sortable: false,
-            width: 160,
-        },
+        
         {
             field: "action",
             headerName: "Action",
@@ -80,8 +62,8 @@ const FormDetail = ({ history, match}) => {
             renderCell: (params) => {
                 return (
                     <div>
-                   
-                        <Link to={`/form/${params.row._id}`}>
+
+                        <Link to={`/demoClassLists/${params.row._id}`}>
                             <button className={classes.userListEdit}>View</button>
                         </Link>
                    </div>
@@ -93,17 +75,18 @@ const FormDetail = ({ history, match}) => {
     const userLogin = useSelector((state) => state.userLogin);
     const { userInfo } = userLogin;
 
-    const adminFormList = useSelector((state) => state.adminFormList);
-    const { loding, error, lists } = adminFormList;
+    const democlassList = useSelector((state) => state.democlassList);
+    const { loding, error, schedual } = democlassList;
     
     // const formDelete = useSelector((state) => state.formDelete);
     // const {success} = formDelete
     useEffect(() => {
 
         if (userInfo && userInfo.isAdmin) {
-            dispatch(adminFormLists());
+            dispatch(DemoClasslist());
         }else{
             history.push('/login')
+            dispatch(logout())
         }
         
     }, [dispatch, history]);
@@ -113,13 +96,13 @@ const FormDetail = ({ history, match}) => {
 
     return (
         <div>
-    
-            <div style={{ height: 400, padding: "20px" }}>
-                <Typography variant="h4"> All User Forms</Typography>
+            <div style={{ height: 400,width:'90% ', padding: "20px" , marginLeft: "50px"}}>
+                <Typography variant="h4"> Demo Class Schedual</Typography>
                 {error && <Alerts severity="error"> {error}</Alerts>}
                 {loding && <Loder />}
                 <DataGrid
-                    rows={lists}
+                    rows={schedual}
+                    
                     columns={columns}
                     pageSize={5}
                     checkboxSelection
@@ -130,6 +113,5 @@ const FormDetail = ({ history, match}) => {
     );
 };
 
-export default FormDetail;
-
+export default DemoClassLists;
 

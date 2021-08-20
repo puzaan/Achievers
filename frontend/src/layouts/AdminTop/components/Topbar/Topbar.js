@@ -18,7 +18,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
 import {  DarkModeToggler } from 'components/atoms';
 import Dropdown from './Dropdown';
-
+import NativeSelects from './NativeSelects'
 const useStyles = makeStyles(theme => ({
   flexGrow: {
     flexGrow: 1,
@@ -184,6 +184,7 @@ const Topbar = ({
               Forms Details
             </Typography>
           </ListItem>
+          
           <ListItem
             className={clsx(classes.listItem, 'menu-item--no-dropdown')}
           >
@@ -196,6 +197,10 @@ const Topbar = ({
             >
               Users Detail
             </Typography>
+          </ListItem>
+          <ListItem>
+            <NativeSelects />
+
           </ListItem>
           <ListItem
                     className={clsx(classes.listItem, 'menu-item--no-dropdown')}

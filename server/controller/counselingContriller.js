@@ -6,25 +6,19 @@ const counselingForm = catcAsync(async (req, res) => {
         name: req.body.name,
         email: req.body.email,
         number: req.body.number,
-        counseling: req.body.counseling,
-        general: req.body.general,
         date: req.body.date,
+        topic: req.body.topic,
     });
     if(createForm){
         res.status(201)
         res.json({
-            _id: createForm._id,
-            name: createForm.name,
-            number: createForm.number,
-            counseling: createForm.counseling,
-        general: createForm.general,
-        date: createForm.date,
+            createForm
         });
     }else{
         res.status(400);
         throw new Error("Invalid Form Data");
     }
-    
+
 });
 
 

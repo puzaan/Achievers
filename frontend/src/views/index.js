@@ -12,3 +12,8 @@ export {default as Form} from './Forms'
 export {default as FormByIds} from './FormsById'
 export {default as DemoClass} from './DemoClass'
 export {default as Counseling} from './Counseling'
+export {default as CounsellingLists} from './CounsellingLists'
+export {default as DemoClassLists} from './DemoClassList'
+export {default as CounsellingById} from './CounsellingById'
+export {default as DemoClassById} from './DemoClassById'
+

@@ -12,10 +12,11 @@ import {
   RadioGroup,
   Radio,
 } from '@material-ui/core';
+import {CreateCounselling} from 'action/counselingAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { Message } from 'components/message.js';
-import {CreateCounselling} from 'action/counselingAction';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -54,10 +55,9 @@ const Form = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [inputs, setInputs] = useState([]);
-  const [date, setDate] = useState(new Date());
 
-  console.log(inputs);
+  const [date, setDate] = useState(new Date());
+  const [inputs, setInputs] = useState([]);
   const dispatch = useDispatch();
   const counseling = useSelector(state => state.counseling);
   const { loading, error, counselingData } = counseling;
@@ -71,7 +71,7 @@ const Form = () => {
   const handleSubmit = event => {
     event.preventDefault();
     dispatch(
-      CreateCounselling(fullName, email, phone, inputs, date),
+      CreateCounselling(fullName, email, phone, date, inputs),
    );
   };
 
