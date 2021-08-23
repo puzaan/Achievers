@@ -8,7 +8,7 @@ const Dashboard = ({history}) => {
 
     useEffect(() => {
         if(!userInfo){
-            history.push('/login')
+            history.push('/login?redirect=dashboard')
         }
         
     })

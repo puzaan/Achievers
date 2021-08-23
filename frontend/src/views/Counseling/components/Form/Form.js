@@ -80,7 +80,7 @@ const Form = () => {
       <form name="password-reset-form" onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Typography variant="h5">Full Name *</Typography>
+            <Typography variant="body1">Full Name *</Typography>
             <TextField
               placeholder="Full name *"
               variant="outlined"
@@ -92,7 +92,7 @@ const Form = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h5">Email *</Typography>
+            <Typography variant="body1">Email *</Typography>
             <TextField
               placeholder="E-mail *"
               variant="outlined"
@@ -107,7 +107,7 @@ const Form = () => {
           </Grid>
 
           <Grid item xs={12}>
-            <Typography variant="h5">Phone No *</Typography>
+            <Typography variant="body1">Phone No *</Typography>
             <TextField
               placeholder="Phone No *"
               variant="outlined"
@@ -122,15 +122,17 @@ const Form = () => {
 
           <Grid item xs={12}>
             <FormControl component="fieldset">
-              <Typography variant="h5">
+              <Typography variant="body1">
                 In which Topic you want Counselling? *
               </Typography>
               <FormGroup>
                 {data.map(form => {
                   return (
                     <FormControlLabel
+                    
                       control={
                         <Checkbox
+                        size='small'
                           value={form.courseName}
                           onClick={() => {
                             const index = inputs.findIndex(
@@ -155,7 +157,7 @@ const Form = () => {
             </FormControl>
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h5">Choose Schedual Date</Typography>
+            <Typography variant="body1">Choose Schedual Date</Typography>
 
             <TextField
               id="date"

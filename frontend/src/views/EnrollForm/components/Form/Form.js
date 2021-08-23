@@ -113,7 +113,7 @@ const Form = () => {
       <form name="password-reset-form" onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Typography variant="h5">Full Name *</Typography>
+            <Typography variant="body1">Full Name *</Typography>
             <TextField
               placeholder="Full name *"
               variant="outlined"
@@ -125,7 +125,7 @@ const Form = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h5">Email *</Typography>
+            <Typography variant="body1">Email *</Typography>
             <TextField
               placeholder="E-mail *"
               variant="outlined"
@@ -140,7 +140,7 @@ const Form = () => {
           </Grid>
 
           <Grid item xs={12}>
-            <Typography variant="h5">Phone No *</Typography>
+            <Typography variant="body1">Phone No *</Typography>
             <TextField
               placeholder="Phone No *"
               variant="outlined"
@@ -155,7 +155,7 @@ const Form = () => {
 
           <Grid item xs={12}>
             <FormControl component="fieldset">
-              <Typography variant="h5">
+              <Typography variant="body1">
                 In which course you want to enroll in? *
               </Typography>
               <FormGroup>
@@ -165,6 +165,7 @@ const Form = () => {
                       control={
                         <Checkbox
                           value={form.courseName}
+                          size='small'
                           onClick={() => {
                             const index = inputs.findIndex(
                               item => item === form.courseName,
@@ -190,7 +191,7 @@ const Form = () => {
 
           <Grid item xs={12}>
             <FormControl component="fieldset">
-              <Typography variant="h5">Your Qualification?</Typography>
+              <Typography variant="body1">Your Qualification?</Typography>
               <RadioGroup
                 aria-label="Qualification"
                 name="Qualification"
@@ -227,7 +228,7 @@ const Form = () => {
           </Grid>
 
           <Grid item xs={12}>
-            <Typography variant="h5">
+            <Typography variant="body1">
               Your college/ Institution Name? *
             </Typography>
             <TextField
@@ -242,7 +243,7 @@ const Form = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h5">Do you want to ask anything?</Typography>
+            <Typography variant="body1">Do you want to ask anything?</Typography>
             <TextField
               placeholder="Do you want to ask anything? "
               variant="outlined"

@@ -85,7 +85,7 @@ const DemoClassLists = ({ history, match}) => {
         if (userInfo && userInfo.isAdmin) {
             dispatch(DemoClasslist());
         }else{
-            history.push('/login')
+            history.push('/login?redirect=demoClassLists')
             dispatch(logout())
         }
         

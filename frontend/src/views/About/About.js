@@ -43,9 +43,9 @@ const About = () => {
       <Section className={classes.sectionNoPaddingTop}>
         <WhoWeAre />
       </Section>
-      <Section className={classes.sectionNoPaddingTop}>
+      {/* <Section className={classes.sectionNoPaddingTop}>
         <Team data={team} />
-      </Section>
+      </Section> */}
       <SectionAlternate className={classes.sectionPartners}>
         <Partners data={companies} />
       </SectionAlternate>

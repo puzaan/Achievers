@@ -11,6 +11,7 @@ const {
     COUNSELING_DETAIL_ID_REQUEST,
     COUNSELING_DELETE_FAIL,
     COUNSELING_DELETE_REQUEST,
+    COUNSELING_DETAIL_RESET,
 } = require('constants/counseling');
 
 export const createCounseling = (state = {}, action) => {
@@ -52,6 +53,11 @@ export const counsellingListReducer = (state = { lists: [] }, action) => {
                 loading: false,
                 error: action.payload,
             };
+            case COUNSELING_DETAIL_RESET:
+                return {
+                    lists: []
+
+                }
         default:
             return state;
     }

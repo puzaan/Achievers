@@ -84,7 +84,7 @@ const CounsellingLists = ({ history, match}) => {
         if (userInfo && userInfo.isAdmin) {
             dispatch(counsellingLists());
         }else{
-            history.push('/')
+            history.push('/login?redirect=counsellingLists')
             dispatch(logout())
         }
         

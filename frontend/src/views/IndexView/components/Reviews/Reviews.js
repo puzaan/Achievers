@@ -6,11 +6,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import { colors } from '@material-ui/core';
 import { SectionHeader, IconAlternate } from 'components/molecules';
 import { CardReview } from 'components/organisms';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   swiperContainer: {
     width: '100%',
-    maxWidth: 600,
+    textAlign: "left"
+    // maxWidth: 600,
   },
 }));
 
@@ -20,8 +22,9 @@ const Reviews = props => {
 
   React.useEffect(() => {
     new Swiper('.swiper-container', {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 15,
+      
       pagination: {
         el: '.swiper-container .swiper-pagination',
         type: 'bullets',
@@ -30,6 +33,7 @@ const Reviews = props => {
       autoplay: {
         delay: 8000,
       },
+      
     });
   });
 
@@ -47,13 +51,7 @@ const Reviews = props => {
               className={'swiper-slide'}
               noBorder
               noShadow
-              text={item.review}
-              // icon={
-              //   <IconAlternate
-              //     color={colors.indigo}
-              //     fontIconClass="fas fa-quote-right"
-              //   />
-              // }
+              text={<Typography align = 'left' variant = "h6"> {item.review} </Typography>}
               authorName={item.name}
               authorTitle={` Enrolled in: ${item.enroll}`}
               authorPhoto={item.authorPhoto}

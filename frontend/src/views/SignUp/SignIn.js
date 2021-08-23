@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SignIn({history}) {
+export default function SignIn({history, location}) {
     const classes = useStyles();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -42,12 +42,12 @@ export default function SignIn({history}) {
     const dispatch = useDispatch();
     const userLogin = useSelector((state) => state.userLogin)
     const {loding, error, userInfo} = userLogin;
-
+    const redirect = location.search ? location.search.split("=")[1] : "/login";
 useEffect(() => {
 if(userInfo){
-    history.push('/dashboard')
+    history.push(redirect)
 }
-})
+}, [userInfo, redirect])
 const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login(email, password))

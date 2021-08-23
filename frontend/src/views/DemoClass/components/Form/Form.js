@@ -54,7 +54,7 @@ const dispatch = useDispatch();
       <form name="password-reset-form" onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Typography variant="h5">Full Name *</Typography>
+            <Typography variant="body1">Full Name *</Typography>
             <TextField
               placeholder="Full name *"
               variant="outlined"
@@ -66,7 +66,7 @@ const dispatch = useDispatch();
             />
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h5">Email *</Typography>
+            <Typography variant="body1">Email *</Typography>
             <TextField
               placeholder="E-mail *"
               variant="outlined"
@@ -81,7 +81,7 @@ const dispatch = useDispatch();
           </Grid>
 
           <Grid item xs={12}>
-            <Typography variant="h5">Phone No *</Typography>
+            <Typography variant="body1">Phone No *</Typography>
             <TextField
               placeholder="Phone No *"
               variant="outlined"
@@ -94,13 +94,14 @@ const dispatch = useDispatch();
             />
           </Grid>
           <Grid item xs={12}>
-            <FormControl component="fieldset">
-              <Typography variant="h5">Choose course</Typography>
+            <FormControl size='small' component="fieldset">
+              <Typography variant="body1">Choose course</Typography>
               <RadioGroup
                 aria-label="Course"
                 name="Course *"
                 onChange={e => setCourse(e.target.value)}
                 value={course}
+                size='small'
               >
                 {page.traning.children.course.pages.map((page, i) => (
                   <FormControlLabel
@@ -108,13 +109,14 @@ const dispatch = useDispatch();
                     value={page.title}
                     control={<Radio />}
                     label={page.title}
+                    size='small'
                   />
                 ))}
               </RadioGroup>
             </FormControl>
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h5">Choose Schedual Date</Typography>
+            <Typography variant="body1">Choose Schedual Date</Typography>
 
             <TextField
               id="date"

@@ -103,7 +103,7 @@ const FormDetail = ({ history, match}) => {
         if (userInfo && userInfo.isAdmin) {
             dispatch(adminFormLists());
         }else{
-            history.push('/login')
+            history.push('/login?redirect=/form')
         }
         
     }, [dispatch, history]);
