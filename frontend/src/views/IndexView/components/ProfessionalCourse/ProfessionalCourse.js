@@ -41,15 +41,11 @@ const ProfessionalCourse = props => {
 
   return (
     <div className={className} data-aos="fade-up" {...rest}>
-      {/* <SectionHeader
-        title="Content in Our work section"
-        subtitle="Achiever Academy"
-      /> */}
+      
       <Grid container justify="center">
         
           <Grid
             data-aos="fade-up"
-            // key={index}
             item
             container
             xs={12}
@@ -63,7 +59,6 @@ const ProfessionalCourse = props => {
                 titleVariant="h5"
                 title="Professional Courses"
                 subtitle="Taking up a professional course is important to improve your performance in a given career. In order to acquire more advanced and better skills, many people today go for these professional courses. It further gives you confidence along with basic information. Professional courses offer a large array of benefits, that is why it is highly recommended to enroll in such courses."
-                //ctaGroup={[<LearnMoreLink title="Learn more" variant="h6" />]}
                 align="left"
                 disableGutter
               />
@@ -75,7 +70,7 @@ const ProfessionalCourse = props => {
               </div>
             </Grid>
             <Grid item container justify="center" xs={12} sm={6}>
-              <Image src='https://assets.maccarianagency.com/the-front/illustrations/brand-platform.svg' alt='Professional Courses' />
+              <Image src='https://purpletutor.com/wp-content/uploads/2020/12/purple-tutor11.svg' alt='Professional Courses' />
             </Grid>
           </Grid>
         

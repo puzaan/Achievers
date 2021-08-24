@@ -34,14 +34,14 @@ const Integrations = props => {
         title="Integrations"
         subtitle="TheFront integrates with all the tools you love and use, to allow you to work smarter and faster."
         ctaGroup={[
-          <Button
-            variant="outlined"
-            size={isMd ? 'large' : 'medium'}
-            color="primary"
+          // <Button
+          //   variant="outlined"
+          //   size={isMd ? 'large' : 'medium'}
+          //   color="primary"
             
-          >
-            See all integrations
-          </Button>,
+          // >
+          //   See all integrations
+          // </Button>,
         ]}
         fadeUp
       />

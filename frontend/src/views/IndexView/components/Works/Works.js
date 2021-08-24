@@ -140,15 +140,6 @@ const Works = props => {
                     </Typography>
                     
                   </div>
-                  <Button
-              variant="contained"
-              color="primary"
-              component="a"
-              href="/signup-simple"
-              size="medium"
-            >
-              Contact us
-            </Button>
                 </Grid>
               </Grid>
             </div>

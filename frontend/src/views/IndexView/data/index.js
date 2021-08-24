@@ -113,21 +113,13 @@ export const reviews = [
 
 
 export const work = [
-  // {
-  //   title: 'Professional Courses',
-  //   description:
-  //     'Taking up a professional course is important to improve your performance in a given career. In order to acquire more advanced and better skills, many people today go for these professional courses. It further gives you confidence along with basic information. Professional courses offer a large array of benefits, that is why it is highly recommended to enroll in such courses.',
-  //     name:'Read More',
-  //     nav:'/',
-  //   illustration: 'https://assets.maccarianagency.com/the-front/illustrations/brand-platform.svg',
-  // },
   {
     title: 'Internship programs',
     description:
       'Achiever groups provide internships with a regular guide. Mentors give you the means to have your questions asked and you have someone who can guide you in the right direction. When given the opportunity, take advantage of having a mentor and it will significantly enhance your internship experience.',
     name:'Apply',
     nav:'/internship',
-      illustration: 'https://assets.maccarianagency.com/the-front/illustrations/mobiles.svg',
+      illustration:'https://hennge.com/global/img/gip/illust01.svg' ,
   },
   {
     label: 'Scholarship programs',
@@ -136,15 +128,15 @@ export const work = [
       'This is to notify all the students of any backgrounds who are keen and determined learners in the IT field that Achiever groups, a Software company is  regulaconducting a scholarship program for all those exceptional and deserving students and especially those students who are unable to continue the course of IT due to financial difficulties. We as achievers are ready to lend a helping hand to all those students to move forward to build their career in the field of IT.',
       name: 'Apply',
       nav:'/scholarship',
-    illustration: 'https://assets.maccarianagency.com/the-front/illustrations/dashboard.svg',
+    illustration:  'https://www.verzeo.com/v3/images/internship/landing/Illustration.svg',
   },
 ];
 
 export const workReviews = [
   {
     authorPhoto: {
-      src: 'https://www.unifiedinfotech.net/assets/images/new-home/eshipper-portfolio@1.5x.jpg',
-      srcSet: 'https://www.unifiedinfotech.net/assets/images/new-home/eshipper-portfolio@1.5x.jpg',
+      src: 'https://www.unifiedinfotech.net/assets/images/new-home/Sofy-portfolio@1.5x.jpg',
+      srcSet: 'https://scontent.fktm8-1.fna.fbcdn.net/v/t1.6435-9/35226243_855164508014935_2463990675784335360_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=174925&_nc_ohc=92Fw06YAeKQAX-yGprt&_nc_oc=AQm2V3OUl_WRcSr4ywzA7n6yW8qstg6DwpnqYGT6gNKuD1yqMKcNyKoYx0DFa3Lci6w&_nc_ht=scontent.fktm8-1.fna&oh=3909dda07bffd291efd04652b0adb280&oe=614983FA',
     },
     authorName: `Website Re-design for one of the canada's leading shipping company during the COVID-19 `,
     authorOccupation: 'We were hired to help eShipper create a brand-new website which shall enable them to convert more of the huge amount of traffic they already received and improve their brand perception. Through a data and research driven process, we created a modern website which resulted in 3x leads and 4x subscriptions just 2 months post its launch.',
