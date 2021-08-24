@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Swiper from 'swiper';
 import { makeStyles } from '@material-ui/core/styles';
-import { colors } from '@material-ui/core';
-import { SectionHeader, IconAlternate } from 'components/molecules';
+import { SectionHeader} from 'components/molecules';
 import { CardReview } from 'components/organisms';
 import { Typography } from '@material-ui/core';
 
@@ -22,7 +21,7 @@ const Reviews = props => {
 
   React.useEffect(() => {
     new Swiper('.swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 15,
       
       pagination: {

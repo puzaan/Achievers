@@ -59,7 +59,7 @@ const Application = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Apply for this job"
+        title="Apply for Internship"
         subtitleProps={{
           variant: 'body1',
           color: 'textPrimary',
@@ -103,6 +103,41 @@ const Application = props => {
               type="email"
             />
           </Grid>
+          <Grid item xs={12} data-aos="fade-up">
+            <Typography
+              variant="subtitle1"
+              color="textPrimary"
+              className={classes.inputTitle}
+            >
+              Contact No
+            </Typography>
+            <TextField
+              placeholder="Your Contact Number"
+              variant="outlined"
+              size="medium"
+              name="contactNo"
+              fullWidth
+              type="Number"
+            />
+          </Grid>
+          <Grid item xs={12} data-aos="fade-up">
+            <Typography
+              variant="subtitle1"
+              color="textPrimary"
+              className={classes.inputTitle}
+            >
+              Github Link
+            </Typography>
+            <TextField
+              placeholder="Your github link"
+              variant="outlined"
+              size="medium"
+              name="github"
+              fullWidth
+              type="link"
+            />
+          </Grid>
+          
           <Grid item xs={12} sm={6} data-aos="fade-up">
             <Button
               variant="outlined"
@@ -124,28 +159,7 @@ const Application = props => {
               <input type="file" style={{ display: 'none' }} />
             </Button>
           </Grid>
-          <Grid item xs={12} sm={6} data-aos="fade-up">
-            <Button
-              variant="outlined"
-              component="label"
-              color="primary"
-              
-              fullWidth
-              size="large"
-              
-            >
-              <IconText
-                fontIconClass="fas fa-cloud-upload-alt"
-                title="Upload cover letter"
-                
-                typographyProps={{
-                  className: classes.iconText,
-                }}
-              />
-              <input type="file" style={{ display: 'none' }} />
-            </Button>
-          </Grid>
-          <Grid item xs={12} data-aos="fade-up">
+          {/* <Grid item xs={12} data-aos="fade-up">
             <Typography
               variant="subtitle1"
               color="textPrimary"
@@ -162,6 +176,7 @@ const Application = props => {
               rows={4}
             />
           </Grid>
+          */}
           <Grid item container justify="center" xs={12}>
             <Button
               variant="contained"
@@ -170,7 +185,7 @@ const Application = props => {
               size="large"
               
             >
-              Apply now
+              Submit
             </Button>
           </Grid>
         </Grid>

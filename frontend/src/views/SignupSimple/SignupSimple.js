@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Form, Contact} from './components';
-import { SectionHeader } from 'components/molecules';
+import {  Contact} from './components';
 import { Section } from 'components/organisms';
 import {  mapData} from './data';
 const useStyles = makeStyles(theme => ({
@@ -27,17 +26,6 @@ const SignupSimple = () => {
   return (
     <div>
       <Section className={classes.section}>
-        {/* <div className={classes.formContainer}>
-          <SectionHeader
-            title="Contact us"
-            subtitle="Need information fill up form and send us"
-            titleProps={{
-              variant: 'h3',
-            }}
-          />
-          <Form /> 
-          
-        </div> */}
         <Contact data={mapData} />
       </Section>
     </div>

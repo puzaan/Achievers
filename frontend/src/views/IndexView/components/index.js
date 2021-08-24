@@ -8,3 +8,4 @@ export { default as Categories } from './Categories';
 export { default as Reviews } from './Reviews';
 export { default as Work } from './Work';
 export { default as Process } from './Process';
+export { default as ProfessionalCourse } from './ProfessionalCourse';

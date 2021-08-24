@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Typography, Button } from '@material-ui/core';
+import { useMediaQuery, Grid,Button } from '@material-ui/core';
 import ReactPlayer from 'react-player'
-import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 
 const useStyles = makeStyles(theme => ({

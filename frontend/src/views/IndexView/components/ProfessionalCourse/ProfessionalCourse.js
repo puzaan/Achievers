@@ -5,8 +5,6 @@ import {} from '@material-ui/core';
 import { useMediaQuery, Grid, Button } from '@material-ui/core';
 import { Image, } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
-import {Link} from 'react-router-dom'
-import ProfessionalCourse from '../ProfessionalCourse';
 
 const useStyles = makeStyles(theme => ({
   listGrid: {
@@ -20,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-const Work = props => {
+const ProfessionalCourse = props => {
   const { data, className, ...rest } = props;
   const classes = useStyles();
 
@@ -29,55 +27,64 @@ const Work = props => {
     defaultMatches: true,
   });
 
+  const scrollTo = id => {
+    setTimeout(() => {
+      const element = document.querySelector(`#${id}`);
+      if (!element) {
+        return;
+      }
+
+      window.scrollTo({ left: 0, top: element.offsetTop, behavior: 'smooth' });
+    });
+  };
+
+
   return (
     <div className={className} data-aos="fade-up" {...rest}>
-      <SectionHeader
+      {/* <SectionHeader
         title="Content in Our work section"
         subtitle="Achiever Academy"
-      />
-      <div>
-        <ProfessionalCourse />
-        </div>
+      /> */}
       <Grid container justify="center">
-        {data.map((item, index) => (
+        
           <Grid
             data-aos="fade-up"
-            key={index}
+            // key={index}
             item
             container
             xs={12}
             spacing={isMd ? 4 : 2}
-            direction={index % 2 === 1 ?  'row': 'row-reverse'}
+            direction= 'row' 
             className={classes.listGrid}
           >
             <Grid item xs={12} sm={6}>
               <div>
               <SectionHeader
                 titleVariant="h5"
-                title={item.title}
-                subtitle={item.description}
+                title="Professional Courses"
+                subtitle="Taking up a professional course is important to improve your performance in a given career. In order to acquire more advanced and better skills, many people today go for these professional courses. It further gives you confidence along with basic information. Professional courses offer a large array of benefits, that is why it is highly recommended to enroll in such courses."
                 //ctaGroup={[<LearnMoreLink title="Learn more" variant="h6" />]}
                 align="left"
                 disableGutter
               />
-               <Link to = {item.nav} style={{ textDecoration: 'none'}}>
-              <Button variant="contained" color="primary" size='medium'>
-            {item.name}
+               
+              <Button variant="contained" color="primary" size='medium' onClick={()=>scrollTo('course')} >
+            See Courses
           </Button>
-          </Link>
+          
               </div>
             </Grid>
             <Grid item container justify="center" xs={12} sm={6}>
-              <Image src={item.illustration} alt={item.title} />
+              <Image src='https://assets.maccarianagency.com/the-front/illustrations/brand-platform.svg' alt='Professional Courses' />
             </Grid>
           </Grid>
-        ))}
+        
       </Grid>
     </div>
   );
 };
 
-Work.propTypes = {
+ProfessionalCourse.propTypes = {
   /**
    * External classes
    */
@@ -88,4 +95,4 @@ Work.propTypes = {
   data: PropTypes.array.isRequired,
 };
 
-export default Work;
+export default ProfessionalCourse;

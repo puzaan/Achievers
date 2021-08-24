@@ -16,4 +16,7 @@ export {default as CounsellingLists} from './CounsellingLists'
 export {default as DemoClassLists} from './DemoClassList'
 export {default as CounsellingById} from './CounsellingById'
 export {default as DemoClassById} from './DemoClassById'
+export {default as Internship} from './InternshipProgram'
+export {default as Scholarship} from './Scholarship'
+export {default as Loader} from './Loder'
 

@@ -32,7 +32,7 @@ const EnrollForm = ({history}) => {
             title="Enrollment Form"
             
             titleProps={{
-              variant: 'h3',
+              variant: 'h6',
             }}
           />
           <Form />

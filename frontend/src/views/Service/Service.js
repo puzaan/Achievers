@@ -17,7 +17,6 @@ import {
 import {Reviews} from '../IndexView/components/index'
 import {
   partners,
-  reviews,
   integrations,
   customizations,
 } from './data';

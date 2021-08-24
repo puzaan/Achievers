@@ -27,6 +27,8 @@ CounsellingLists as CounsellingLists,
 DemoClassLists as DemoClassLists,
 CounsellingById as CounsellingById,
 DemoClassById as DemoClassById,
+Internship,
+Scholarship,
 } from './views';
 
 const Routes = () => {
@@ -50,6 +52,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={EnrollForm}
+            layout={MainLayout}
+          />
+        )}
+      />
+      <Route
+        exact
+        path={`/internship`}
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={Internship}
             layout={MainLayout}
           />
         )}
@@ -86,6 +99,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={CareerOpeningView}
+            layout={MainLayout}
+          />
+        )}
+      />
+       <Route
+        exact
+        path={`/scholarship`}
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={Scholarship}
             layout={MainLayout}
           />
         )}

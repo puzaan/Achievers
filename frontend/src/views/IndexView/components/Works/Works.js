@@ -8,20 +8,6 @@ import { Image } from 'components/atoms';
 import { SectionHeader } from 'components/molecules';
 
 const useStyles = makeStyles(theme => ({
-  // btn: {
-  //   background: '#013220',
-  //   borderRadius: 3,
-  //   border: 0,
-  //   color: 'white',
-  //   height: 48,
-  //   padding: '0 30px',
-  //   '&:hover': {
-  //     background: 'black',
-  //     color: 'white'
-
-  //   }
-    
-  // },
   reviewAuthor: {
     fontWeight: 'bold',
     marginTop: theme.spacing(3),

@@ -113,23 +113,29 @@ export const reviews = [
 
 
 export const work = [
+  // {
+  //   title: 'Professional Courses',
+  //   description:
+  //     'Taking up a professional course is important to improve your performance in a given career. In order to acquire more advanced and better skills, many people today go for these professional courses. It further gives you confidence along with basic information. Professional courses offer a large array of benefits, that is why it is highly recommended to enroll in such courses.',
+  //     name:'Read More',
+  //     nav:'/',
+  //   illustration: 'https://assets.maccarianagency.com/the-front/illustrations/brand-platform.svg',
+  // },
   {
-    title: 'Your Brand Platform',
+    title: 'Internship programs',
     description:
-      'Monetize your website and manage all guest interactions with your own brand, logo and domains.',
-    illustration: 'https://assets.maccarianagency.com/the-front/illustrations/brand-platform.svg',
+      'Achiever groups provide internships with a regular guide. Mentors give you the means to have your questions asked and you have someone who can guide you in the right direction. When given the opportunity, take advantage of having a mentor and it will significantly enhance your internship experience.',
+    name:'Apply',
+    nav:'/internship',
+      illustration: 'https://assets.maccarianagency.com/the-front/illustrations/mobiles.svg',
   },
   {
-    title: 'Mobile Compatible Platform',
+    label: 'Scholarship programs',
+    title: 'Scholarship programs',
     description:
-      'Introduce your brand-new mobile friendly website to your customers. Seamlessly integrates with WiFi hardware and marketing automation software.',
-    illustration: 'https://assets.maccarianagency.com/the-front/illustrations/mobiles.svg',
-  },
-  {
-    label: 'CLIENT PORTAL ACCESS',
-    title: 'Simple Customer Dashboards',
-    description:
-      'Give sub-users access to a simplified dashboard with limited permission levels to offer remote management and real-time analytics.',
+      'This is to notify all the students of any backgrounds who are keen and determined learners in the IT field that Achiever groups, a Software company is  regulaconducting a scholarship program for all those exceptional and deserving students and especially those students who are unable to continue the course of IT due to financial difficulties. We as achievers are ready to lend a helping hand to all those students to move forward to build their career in the field of IT.',
+      name: 'Apply',
+      nav:'/scholarship',
     illustration: 'https://assets.maccarianagency.com/the-front/illustrations/dashboard.svg',
   },
 ];

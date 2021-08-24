@@ -1,21 +1,17 @@
 import React from 'react';
-import { makeStyles, Divider } from '@material-ui/core';
+import { makeStyles, Divider,} from '@material-ui/core';
 import { Section, SectionAlternate } from 'components/organisms';
-import {  Features,  QuickStart,  Hero , AskExpert,Works, VideoSection, Categories, Reviews, Work, Process, Articles} from './components';
+import { QuickStart,  Hero , AskExpert,Works, VideoSection, Categories, Reviews, Work, Process} from './components';
 import {
-  courseCategories,
   partners,
-  reviews,
   workReviews,
   work,
   process,
   quikeStart,
   response,
-  articles
-
-
 } from './data';
 import {page} from '../CourseDetail/data'
+import {helmet} from '../../utils/helmet'
 const useStyles = makeStyles(() => ({
   sectionAlternateNoPaddingTop: {
     '& .section-alternate__content': {
@@ -30,9 +26,10 @@ const useStyles = makeStyles(() => ({
 
 const IndexView = ({ themeMode }) => {
   const classes = useStyles();
-
   return (
     <div>
+      <helmet title= {'sadfsdaf'} description={'description'}/>
+
       <Hero themeMode={themeMode} />
 
       <SectionAlternate className={classes.sectionAlternateNoPaddingTop}>
@@ -44,29 +41,28 @@ const IndexView = ({ themeMode }) => {
       <Section>
         <Works data={workReviews} />
       </Section>
-      {/* <SectionAlternate>
-        <Features />
-      </SectionAlternate> */}
       <Section>
         <AskExpert/>
       </Section>
       <Section>
+        <div>
         <Work data={work} />
+        </div>
       </Section>
       <Section className={classes.dividerSection}>
         <Divider />
       </Section>
+      <div id="course">
       <Section className={classes.dividerSection}>
       <Categories data={page} />
       </Section>
+      </div>
       <Section narrow>
         <Process data={process} />
       </Section>
       <Section>
       <Reviews data={response} />
       </Section>
-      
-
     </div>
   );
 };

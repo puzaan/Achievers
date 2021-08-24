@@ -7,8 +7,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Loder from 'views/Loder';
-import Alerts from 'views/Alert/Alert';
 
 const useStyles = makeStyles((theme) => ({
     root: {

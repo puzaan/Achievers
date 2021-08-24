@@ -32,7 +32,7 @@ const DemoClass = ({history}) => {
             title="Demo Class Form"
             
             titleProps={{
-              variant: 'h3',
+              variant: 'h6',
             }}
           />
           <Form />

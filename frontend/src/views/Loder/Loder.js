@@ -11,13 +11,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Loder() {
+const Loder=()=> {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <CircularProgress />
-      
     </div>
   );
 }
+
+export default Loder

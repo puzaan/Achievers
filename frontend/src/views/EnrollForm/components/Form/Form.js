@@ -14,9 +14,9 @@ import {
 } from '@material-ui/core';
 import { EnrollForm } from '../../../../action/enrollAction';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Message } from 'components/message.js';
-
+import Loder from 'views/Loder'
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -275,6 +275,7 @@ const Form = () => {
             </Button>
           </Grid>
           <Grid item xs={12}>
+          {loading && <Loder />}
             {error && <Message severity="error">{error}</Message>}
           </Grid>
         </Grid>

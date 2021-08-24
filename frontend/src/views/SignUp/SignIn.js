@@ -47,7 +47,8 @@ useEffect(() => {
 if(userInfo){
     history.push(redirect)
 }
-}, [userInfo, redirect])
+}, [userInfo, redirect, history]);
+
 const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login(email, password))
