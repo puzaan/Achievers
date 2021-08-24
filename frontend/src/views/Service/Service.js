@@ -14,13 +14,14 @@ import {
   Features,
   Integrations,
 } from './components';
-import {Reviews} from '../IndexView/components/index'
+import {Reviews, Categories} from '../IndexView/components/index'
 import {
   partners,
   integrations,
   customizations,
 } from './data';
-import {response} from '../IndexView/data'
+import {response, } from '../IndexView/data'
+import {page} from '../CourseDetail/data'
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
     paddingTop: theme.spacing(3),
@@ -90,7 +91,7 @@ const Service = () => {
           <Divider />
           <Divider />
         </Section>
-        <Features data={customizations} />
+        <Categories data={page} /> 
         <Section>
           <Divider />
         </Section>

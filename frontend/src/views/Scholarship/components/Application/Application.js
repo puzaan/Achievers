@@ -126,7 +126,7 @@ const Application = props => {
               color="textPrimary"
               className={classes.inputTitle}
             >
-              Github Link
+              Github Link or Project Link
             </Typography>
             <TextField
               placeholder="Your github link"
@@ -158,38 +158,16 @@ const Application = props => {
               <input type="file" style={{ display: 'none' }} />
             </Button>
           </Grid>
-          {/* <Grid item xs={12} sm={6} data-aos="fade-up">
-            <Button
-              variant="outlined"
-              component="label"
-              color="primary"
-              
-              fullWidth
-              size="large"
-              
-            >
-              <IconText
-                fontIconClass="fas fa-cloud-upload-alt"
-                title="Upload cover letter"
-                
-                typographyProps={{
-                  className: classes.iconText,
-                }}
-              />
-              <input type="file" style={{ display: 'none' }} />
-            </Button>
-          </Grid>
-           */}
           <Grid item xs={12} data-aos="fade-up">
             <Typography
               variant="subtitle1"
               color="textPrimary"
               className={classes.inputTitle}
             >
-              Message
+              Reason for Scholorship
             </Typography>
             <TextField
-              placeholder="Your question about our services"
+              placeholder="Reason for Scholorship"
               variant="outlined"
               name="message"
               fullWidth
