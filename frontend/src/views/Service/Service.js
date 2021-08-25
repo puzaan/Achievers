@@ -11,17 +11,16 @@ import ForumIcon from '@material-ui/icons/Forum';
 import { Section, ContactForm } from 'components/organisms';
 import {
   About,
-  Features,
   Integrations,
 } from './components';
 import {Reviews, Categories} from '../IndexView/components/index'
 import {
   partners,
   integrations,
-  customizations,
 } from './data';
 import {response, } from '../IndexView/data'
 import {page} from '../CourseDetail/data'
+import { Helmet } from 'react-helmet';
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
     paddingTop: theme.spacing(3),
@@ -83,6 +82,13 @@ const Service = () => {
 
   return (
     <div className={classes.root}>
+      <Helmet>
+        <title>Service Page</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
       <Section className={classes.pagePaddingTop}>
         <>
         <About data={partners}  className={classes.pagePaddingTop}/>

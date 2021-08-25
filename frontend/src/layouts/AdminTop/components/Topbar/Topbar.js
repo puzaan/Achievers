@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
@@ -8,13 +8,9 @@ import {
   Hidden,
   List,
   ListItem,
-  ListItemIcon,
-  Popover,
   Typography,
   IconButton,
-  Button,
 } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
 import {  DarkModeToggler } from 'components/atoms';
 import Dropdown from './Dropdown';
@@ -127,18 +123,18 @@ const Topbar = ({
 }) => {
   const classes = useStyles();
 
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [openedPopoverId, setOpenedPopoverId] = useState(null);
+  // const [anchorEl, setAnchorEl] = useState(null);
+  // const [openedPopoverId, setOpenedPopoverId] = useState(null);
 
-  const handleClick = (event, popoverId) => {
-    setAnchorEl(event.target);
-    setOpenedPopoverId(popoverId);
-  };
+  // const handleClick = (event, popoverId) => {
+  //   setAnchorEl(event.target);
+  //   setOpenedPopoverId(popoverId);
+  // };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-    setOpenedPopoverId(null);
-  };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  //   setOpenedPopoverId(null);
+  // };
 
 
   return (

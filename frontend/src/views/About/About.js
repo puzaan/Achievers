@@ -5,14 +5,13 @@ import {
   
   Gallery,
   Hero,
-  Partners,
   Story,
-  Team,
   WhoWeAre,
 } from './components';
 import {Contact} from '../SignupSimple/components'
-import { team, companies,  gallery } from './data';
+import {   gallery } from './data';
 import { mapData} from '../SignupSimple/data';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,6 +35,13 @@ const About = () => {
 
   return (
     <div className={classes.root}>
+      <Helmet>
+        <title>About Page</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
       <Hero />
       <Section>
         <Story />
@@ -43,12 +49,6 @@ const About = () => {
       <Section className={classes.sectionNoPaddingTop}>
         <WhoWeAre />
       </Section>
-      {/* <Section className={classes.sectionNoPaddingTop}>
-        <Team data={team} />
-      </Section> */}
-      <SectionAlternate className={classes.sectionPartners}>
-        <Partners data={companies} />
-      </SectionAlternate>
       <Contact data={mapData} />
       <SectionAlternate>
         <Gallery data={gallery} />

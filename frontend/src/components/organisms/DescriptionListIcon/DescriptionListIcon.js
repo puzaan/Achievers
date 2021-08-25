@@ -50,6 +50,7 @@ const DescriptionListIcon = props => {
         item
         container
         justify={gridJustify}
+        align="center"
         xs={12}
         className="description-list-icon__icon-wrapper"
       >

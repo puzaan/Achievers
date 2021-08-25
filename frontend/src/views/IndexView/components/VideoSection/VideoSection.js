@@ -57,6 +57,7 @@ const VideoSection = props => {
           <Grid container spacing={2} alignItems="flex-start">
             <Grid item xs={12}>
               <SectionHeader
+              //  align='left'
                 title="We have recently conducted Machine learning workshops from the experience  machine learning engineers from the global market ;
                 (keeping the video of the machine learning workshop).
                 "
@@ -72,7 +73,7 @@ const VideoSection = props => {
                   </Button>,
                   
                 ]}
-                align={isMd ? 'left' : 'center'}
+                align={isMd ? 'left' : 'left'}
                 disableGutter
               />
             </Grid>

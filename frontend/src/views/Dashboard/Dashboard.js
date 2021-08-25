@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { Helmet } from 'react-helmet'
+import { useSelector } from 'react-redux'
 
 const Dashboard = ({history}) => {
-    const dispatch = useDispatch()
     const userLogin = useSelector((state) => state.userLogin)
     const { userInfo} = userLogin
 
@@ -14,6 +14,13 @@ const Dashboard = ({history}) => {
     })
     return (
         <div>
+            <Helmet>
+        <title>Dashboard Page</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
            
            <h1> Dashboard panal</h1>
         </div>

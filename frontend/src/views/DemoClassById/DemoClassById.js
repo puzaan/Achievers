@@ -8,8 +8,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Loder from 'views/Loder';
-import Alerts from 'views/Alert/Alert';
+import { Helmet } from 'react-helmet';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -54,7 +54,7 @@ const DemoClassById = ({history, match}) => {
         dispatch(logout())
     }
         dispatch(DemoClassByid(match.params.id));
-    }, [dispatch, match.params.id, success]);
+    }, [dispatch, match.params.id, success, userInfo,history]);
 
     const goBack = (e) => {
       
@@ -69,6 +69,13 @@ const DemoClassById = ({history, match}) => {
     }
     return (
         <div >
+          <Helmet>
+        <title>Demo class list details</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
           <div className={classes.root}>
           <Typography variant="h4"> User Form Details</Typography>
             <Card >

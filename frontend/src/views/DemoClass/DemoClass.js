@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Form } from './components';
 import { SectionHeader } from 'components/molecules';
 import { Section } from 'components/organisms';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles(theme => ({
   formContainer: {
@@ -26,6 +27,13 @@ const DemoClass = ({history}) => {
 
   return (
     <div>
+      <Helmet>
+        <title>Demo class form</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
       <Section className={classes.section}>
         <div className={classes.formContainer}>
           <SectionHeader

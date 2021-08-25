@@ -1,10 +1,9 @@
 import React from 'react';
 import { makeStyles,} from '@material-ui/core/styles';
-
-import {Divider,} from '@material-ui/core';
 import { Section, SectionAlternate } from 'components/organisms';
-import { Application, Main, Newsletter } from './components';
+import { Application, Main} from './components';
 import { jobs } from '../CareerListingMinimal/data/index';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles(theme => ({
   pagePaddingTop: {
@@ -19,16 +18,19 @@ const CareerOpening = ({ match }) => {
   const classes = useStyles();
   return (
     <div>
+      <Helmet>
+        <title>Career Opening Page</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
       <Section className={classes.pagePaddingTop}>
         <Main data={jobData} />
       </Section>
       <SectionAlternate innerNarrowed>
         <Application />
       </SectionAlternate>
-      <Section>
-        <Newsletter />
-      </Section>
-      <Divider />
       
     </div>
   );

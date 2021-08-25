@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Typography, } from "@material-ui/core";
 import { DataGrid } from '@material-ui/data-grid';
-import { formRemove , adminFormLists} from "../../action/FormDetailAction";
-import DeleteIcon from "@material-ui/icons/Delete";
+import { adminFormLists} from "../../action/FormDetailAction";
+//import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
 import Loder from 'views/Loder';
 import Alerts from 'views/Alert/Alert';
 import { makeStyles } from "@material-ui/styles";
+import { Helmet } from "react-helmet";
 
 const useStyle = makeStyles(() => ({
     userListEdit: {
@@ -106,13 +107,20 @@ const FormDetail = ({ history, match}) => {
             history.push('/login?redirect=/form')
         }
         
-    }, [dispatch, history]);
+    }, [dispatch, history, userInfo]);
     
   
 
 
     return (
         <div>
+            <Helmet>
+        <title>Enrollment form list</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
     
             <div style={{ height: 400, padding: "20px" }}>
                 <Typography variant="h4"> All User Forms</Typography>

@@ -74,15 +74,17 @@ export const page = {
           {
             id: '01',
             title: 'Machine Learning Course',
+            time: '1 hour class daily',
+            class: 'Offline/Online Class',
             subtitle: [
               'Machine Learning is a first-class ticket to the most exciting careers in data analysis today. As data sources proliferate along with the computing power to process them, going straight to the data is one of the most straightforward ways to quickly gain insights and make predictions.',
               'Machine Learning (ML) is basically that field of computer science with the help of which computer systems can provide sense to data in much the same way as human beings do. In simple words, ML is a type of artificial intelligence that extract patterns out of raw data by using an algorithm or method. The key focus of ML is to allow computer systems to learn from experience without being explicitly programmed or human intervention.',
             ],
             icon: 'fas fa-user',
             color: colors.amber,
-
+            iternship: '100% Internship after course complet',
             location: 'Putalisadak, Kathmandu, Nepal',
-            duration: ' Duration: 2.5 ',
+            duration: ' Duration: 2.5 Months',
             courseImage: '/ml.jpg',
             alt: 'Machine Learning',
             sylabus: [
@@ -255,21 +257,23 @@ export const page = {
 
                 text: [''],
               },
-              {
-                id: 'faq-13',
-                title: 'Reviews:',
+              // {
+              //   id: 'faq-13',
+              //   title: 'Reviews:',
 
-                text: [
-                  'Students of Machine Learning will provide a review for this course .',
+              //   text: [
+              //     'Students of Machine Learning will provide a review for this course .',
 
-                ],
-              },
+              //   ],
+              // },
             ],
           },
 
           {
             id: '02',
             title: 'MERN Course',
+            time: '1 hour class daily',
+            class: 'Offline/Online Class',
             subtitle: [
               'MERN Stack (MongoDB, ExpressJs, Reactjs and Nodejs) is a very popular programming technology used for developing web apps as well as mobile Apps. Since this technology is user- friendly, interactive, and swift, it has become well accepted in a short period of time. MERN Stack Training in Achiever Groups Software and Research Center is a career-oriented and high-paying job-oriented course which can be done by anyone who wants to build a solid career in the IT sector.',
               'The MERN architecture allows you to easily construct a 3-tier architecture (frontend, backend, database) entirely using JavaScript and JSON.',
@@ -279,9 +283,9 @@ export const page = {
             ],
             icon: 'fas fa-user',
             color: colors.amber,
-
+            iternship: '100% Internship after course complet',
             location: 'Putalisadak, Kathmandu, Nepal',
-            duration: ' Duration: 2.5 ',
+            duration: ' Duration: 2.5 Months ',
             courseImage: '/mern.jpg',
             alt: 'MERN',
 
@@ -458,15 +462,15 @@ export const page = {
                   'Website Metadata ',
                 ],
               },
-              {
-                id: 'faq-11',
-                title: 'Reviews:',
+              // {
+              //   id: 'faq-11',
+              //   title: 'Reviews:',
 
-                text: [
-                  'Students of MERN will provide a review for this course .',
+              //   text: [
+              //     'Students of MERN will provide a review for this course .',
 
-                ],
-              },
+              //   ],
+              // },
             ],
             outcome: [
               {
@@ -501,15 +505,17 @@ export const page = {
           {
             id: '03',
             title: 'Python Course',
+            time: '1 hour class daily',
+            class: 'Offline/Online Class',
             subtitle: [
               `Python is a powerful programming language used in a variety of professions, ranging from data science to web development. It's in the top 10 for "Most Popular" and "Most Loved" technologies (according to StackOverflow's 2016 Developer Survey), making it a relatively friendly language for beginners. Learning Python will enable you to program pretty much anything.`,
               'This course provides an introduction to programming and the Python language.  Students are introduced to core programming concepts like data structures, conditionals, loops, variables, and functions.  This course includes an overview of the various tools available for writing and running Python, and gets students coding quickly.  It also provides hands-on coding exercises using commonly used data structures, writing custom functions, and reading and writing to files. This course may be more robust than some other introductory python courses, as it delves deeper into certain essential programming topics.',
             ],
             icon: 'fas fa-user',
             color: colors.amber,
-
+            iternship: '100% Internship after course complet',
             location: 'Putalisadak, Kathmandu, Nepal',
-            duration: ' Duration: 2.5 ',
+            duration: ' Duration: 2.5 Months',
             courseImage: '',
             alt: 'Python',
 
@@ -748,15 +754,15 @@ export const page = {
                   'Git and Github for source control',
                 ],
               },
-              {
-                id: 'faq-16',
-                title: 'Reviews:',
+              // {
+              //   id: 'faq-16',
+              //   title: 'Reviews:',
 
-                text: [
-                  'Students of Python will provide a review for this course .',
+              //   text: [
+              //     'Students of Python will provide a review for this course .',
 
-                ],
-              },
+              //   ],
+              // },
             ],
             outcome: [
               {
@@ -791,15 +797,17 @@ export const page = {
           {
             id: '04',
             title: 'Flutter Course',
+            time: '1 hour class daily',
+            class: 'Offline/Online Class',
             subtitle: [
               'Welcome to the Complete Flutter App Development Bootcamp with Dart --Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. Over a million developers worldwide are using it, from individuals and startups to big companies like Alibaba, Capital One, and eBay. The course covers some of the fundamental concepts for Flutter development, teaching you how to code using Dart and walking you through building nine real-world apps that run on iOS and Android, even if you have no programming experience.',
               'Flutter - a framework developed by Google - allows you to learn one language (Dart) and build beautiful native mobile apps in no time. Flutter is a SDK providing the tooling to compile Dart code into native code and it also gives you a rich set of pre-built and pre-styled UI elements (so called widgets) which you can use to compose your user interfaces.Flutter is extremely trending and gets used for major Google apps like their Adwords app.',
             ],
             icon: 'fas fa-user',
             color: colors.amber,
-
+            iternship: '100% Internship after course complet',
             location: 'Putalisadak, Kathmandu, Nepal',
-            duration: ' Duration: 2.5 ',
+            duration: ' Duration: 2.5 Month',
             courseImage: '',
             alt: 'Flutter',
             authorPhoto: {
@@ -963,15 +971,15 @@ export const page = {
                   'Publishing App',
                 ],
               },
-              {
-                id: 'faq-11',
-                title: 'Reviews:',
+              // {
+              //   id: 'faq-11',
+              //   title: 'Reviews:',
 
-                text: [
-                  'Students of Flutter will provide a review for this course .',
+              //   text: [
+              //     'Students of Flutter will provide a review for this course .',
 
-                ],
-              },
+              //   ],
+              // },
             ],
 
             outcome: [
@@ -1012,6 +1020,7 @@ export const page = {
               },
             ],
           },
+        
         ],
       },
     },

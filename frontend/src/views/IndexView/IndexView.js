@@ -11,7 +11,7 @@ import {
   response,
 } from './data';
 import {page} from '../CourseDetail/data'
-import {helmet} from '../../utils/helmet'
+import {Helmet} from 'react-helmet'
 const useStyles = makeStyles(() => ({
   sectionAlternateNoPaddingTop: {
     '& .section-alternate__content': {
@@ -28,7 +28,14 @@ const IndexView = ({ themeMode }) => {
   const classes = useStyles();
   return (
     <div>
-      <helmet title= {'sadfsdaf'} description={'description'}/>
+      <Helmet>
+        <title>Home Page</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
+      
 
       <Hero themeMode={themeMode} />
 

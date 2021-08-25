@@ -9,14 +9,12 @@ import {
   FormGroup,
   Checkbox,
   FormControlLabel,
-  RadioGroup,
-  Radio,
 } from '@material-ui/core';
 import {CreateCounselling} from 'action/counselingAction';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import {useHistory } from 'react-router-dom';
 import { Message } from 'components/message.js';
-
+import Loder from 'views/Loder';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -192,8 +190,10 @@ const Form = () => {
           </Grid>
           <Grid item xs={12}>
             {error && <Message severity="error">{error}</Message>}
+            {loading && <Loder/>}
           </Grid>
         </Grid>
+        
       </form>
     </div>
   );

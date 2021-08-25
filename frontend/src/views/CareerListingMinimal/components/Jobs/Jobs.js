@@ -16,7 +16,6 @@ const Jobs = props => {
     <div className={className} {...rest}>
       <SectionHeader
         title="Let’s find you an open position."
-        subtitle="Keep track of what's happening with your data, change permissions, and run reports against your data anywhere in the world."
         subtitleColor="textPrimary"
         data-aos="fade-up"
       />

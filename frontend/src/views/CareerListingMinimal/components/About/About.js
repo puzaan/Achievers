@@ -37,6 +37,16 @@ const About = props => {
     defaultMatches: true,
   });
 
+  const scrollTo = id => {
+    setTimeout(() => {
+      const element =document.querySelector(`#${id}`);
+      if(!element){
+        return
+      }
+      window.scrollTo({left: 0, top: element.offsetTop, behavior: 'smooth'})
+    })
+  }
+
   return (
     <div className={className} {...rest}>
       <Grid
@@ -57,7 +67,9 @@ const About = props => {
           <div>
             <SectionHeader
               title="Want to work with us?"
-              subtitle="Send one-off and automated email, push, and in-app messages to people. Create better stories. Send one-off and automated email, push, and in-app messages to people. Create better stories."
+              subtitle="We are one of the best places to work. Achievers groups creates an atmosphere where you can grow your inner self, show your talents, get the best out of your own self. We believe in invention of new processes that ease your work. The work place at Achievers groups is very flexible.
+
+              We are looking for some fresh talents who can add cultural values at Achievers groups, some one who has the same mission that is ours but also can bring diversity at the same time."
               align="left"
               disableGutter
               subtitleProps={{
@@ -65,7 +77,7 @@ const About = props => {
                 variant: 'body1',
               }}
               ctaGroup={[
-                <Button color="primary" variant="contained" size="large" >
+                <Button color="primary" variant="contained" size="large" onClick = {() => scrollTo('job')}>
                   View open positions
                 </Button>,
               ]}

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import WithLayout from 'WithLayout';
@@ -16,17 +15,17 @@ import {
   SignupSimple as SignupSimpleView,
   CareerListingMinimal as CareerListingMinimalView,
   CourseDetail as CourseDetails,
-  EnrollForm as EnrollForm,
+  EnrollForm,
   SignIn,
   Dashboard,
   Form as FormDetails,
   FormByIds as FormDetailsById,
-  DemoClass as DemoClass,
+  DemoClass,
 Counseling as Couselling,
-CounsellingLists as CounsellingLists,
-DemoClassLists as DemoClassLists,
-CounsellingById as CounsellingById,
-DemoClassById as DemoClassById,
+CounsellingLists,
+DemoClassLists ,
+CounsellingById,
+DemoClassById ,
 Internship,
 Scholarship,
 } from './views';

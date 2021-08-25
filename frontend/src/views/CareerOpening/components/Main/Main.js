@@ -7,7 +7,6 @@ import {
   Grid,
   Typography,
   Divider,
-  Button,
   List,
   ListItem,
   ListItemAvatar,
@@ -17,20 +16,6 @@ import { SectionHeader, DescriptionCta } from 'components/molecules';
 
 
 const useStyles = makeStyles(theme => ({
-  btn: {
-    background: '#013220',
-    borderRadius: 7,
-    border: 0,
-    color: 'white',
-    height: 40,
-    padding: '0 30px',
-    '&:hover': {
-      background: 'black',
-      color: 'white'
-
-    }
-    
-  },
   color:{
     color:'#013220'
   },
@@ -81,11 +66,6 @@ const Main = props => {
           <DescriptionCta
             title={`${data.title}`}
             subtitle={`${data.jobTitle} \n ${data.location} `}
-            secondaryCta={
-              <Button variant="contained" color="primary" size="large" >
-                Apply now
-              </Button>
-            }
             align={'left'}
             titleProps={{
               variant: 'h3',

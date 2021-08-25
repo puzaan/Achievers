@@ -39,6 +39,11 @@ const CardCategoryLink = props => {
     iconAlternateProps,
     titleProps,
     subtitleProps,
+    description,
+    descriptionProps,
+    subdescription,
+    subdescriptionProps,
+    subtitle1,
     ...rest
   } = props;
 
@@ -65,6 +70,7 @@ const CardCategoryLink = props => {
             {...iconAlternateProps}
           />
         </Grid>
+        <div>
         <Grid item xs={12}>
           <Typography
             variant="h6"
@@ -75,7 +81,9 @@ const CardCategoryLink = props => {
             {title}
           </Typography>
         </Grid>
+        </div>
         {subtitle && (
+          <div>
           <Grid item xs={12}>
             <Typography
               variant="subtitle1"
@@ -86,6 +94,39 @@ const CardCategoryLink = props => {
               {subtitle}
             </Typography>
           </Grid>
+          <Grid item xs={12}>
+            <Typography
+              variant="subtitle1"
+              align={align}
+              color="textSecondary"
+              {...subtitleProps}
+            >
+              {description}
+            </Typography>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Typography
+              variant="subtitle1"
+              align={align}
+              color="textSecondary"
+              {...subtitleProps}
+            >
+              {subdescription}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography
+              variant="subtitle1"
+              align={align}
+              color="textSecondary"
+              {...subtitleProps}
+            >
+              {subtitle1}
+            </Typography>
+          </Grid>
+
+          </div>
         )}
       </Grid>
       <a
@@ -110,12 +151,22 @@ CardCategoryLink.defaultProps = {
   iconAlternateProps: {},
   titleProps: {},
   subtitleProps: {},
+  descriptionProps:{},
+  subdescriptionProps:{},
+  subtitle1: {},
+
 };
 
 CardCategoryLink.propTypes = {
   /**
    * External classes
    */
+   description: PropTypes.string.isRequired,
+
+   descriptionProps: PropTypes.string.isRequired,
+   subdescriptionProps : PropTypes.string.isRequired,
+   subdescription : PropTypes.string.isRequired,
+
   className: PropTypes.string,
   /**
    * Promo title to show inside the card
@@ -124,6 +175,7 @@ CardCategoryLink.propTypes = {
   /**
    * Promo subtitle to show inside the card
    */
+   subtitle1: PropTypes.string,
   subtitle: PropTypes.string,
   /**
    * Promo description to show inside the card

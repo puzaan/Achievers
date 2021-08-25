@@ -3,12 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Typography, } from "@material-ui/core";
 import { DataGrid } from '@material-ui/data-grid';
 import { DemoClasslist} from "action/demoClassAction";
-import DeleteIcon from "@material-ui/icons/Delete";
+//import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
 import Loder from 'views/Loder';
 import Alerts from 'views/Alert/Alert';
 import { makeStyles } from "@material-ui/styles";
 import {logout} from 'action/userAction'
+import { Helmet } from "react-helmet";
 
 
 const useStyle = makeStyles(() => ({
@@ -89,13 +90,20 @@ const DemoClassLists = ({ history, match}) => {
             dispatch(logout())
         }
         
-    }, [dispatch, history]);
+    }, [dispatch, history, userInfo]);
     
   
 
 
     return (
         <div>
+            <Helmet>
+        <title>Class Demo list</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
             <div style={{ height: 400,width:'90% ', padding: "20px" , marginLeft: "50px"}}>
                 <Typography variant="h4"> Demo Class Schedual</Typography>
                 {error && <Alerts severity="error"> {error}</Alerts>}

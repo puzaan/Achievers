@@ -138,10 +138,10 @@ export const workReviews = [
       src: 'https://www.unifiedinfotech.net/assets/images/new-home/Sofy-portfolio@1.5x.jpg',
       srcSet: 'https://scontent.fktm8-1.fna.fbcdn.net/v/t1.6435-9/35226243_855164508014935_2463990675784335360_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=174925&_nc_ohc=92Fw06YAeKQAX-yGprt&_nc_oc=AQm2V3OUl_WRcSr4ywzA7n6yW8qstg6DwpnqYGT6gNKuD1yqMKcNyKoYx0DFa3Lci6w&_nc_ht=scontent.fktm8-1.fna&oh=3909dda07bffd291efd04652b0adb280&oe=614983FA',
     },
-    authorName: `Website Re-design for one of the canada's leading shipping company during the COVID-19 `,
-    authorOccupation: 'We were hired to help eShipper create a brand-new website which shall enable them to convert more of the huge amount of traffic they already received and improve their brand perception. Through a data and research driven process, we created a modern website which resulted in 3x leads and 4x subscriptions just 2 months post its launch.',
+    authorName: `Intern `,
+    authorOccupation: `I thoroughly enjoyed my internship and now have very valuable experience under my belt.I feel that quality internships are essential to develop key skills that we can't get in a classroom. While doing internship i learned more reactjs with backend implemented in Node.js and Mongoose as database, hosted on AWS. `,
     feedback:
-      'eShipper',
+      'Pujan Shrestha',
   },
   {
     authorPhoto: {

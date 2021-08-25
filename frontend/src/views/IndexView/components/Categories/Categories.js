@@ -53,6 +53,9 @@ const Categories = props => {
               liftUp
               title={item.title}
               subtitle={item.duration}
+              description={item.iternship}
+              subdescription={item.class}
+              subtitle1={item.time}
               href={`/course-detail/${item.id}`}
               fontIconClass={item.icon}
               color= 'primary'

@@ -32,8 +32,7 @@ const Work = props => {
   return (
     <div className={className} data-aos="fade-up" {...rest}>
       <SectionHeader
-        title="Content in Our work section"
-        subtitle="Achiever Academy"
+        title="Achiever Academy"
       />
       <div>
         <ProfessionalCourse />

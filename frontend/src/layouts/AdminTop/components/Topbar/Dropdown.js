@@ -5,7 +5,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../../../action/userAction';
 import { Link } from 'react-router-dom';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyle = makeStyles(theme => ({

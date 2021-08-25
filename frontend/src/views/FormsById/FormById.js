@@ -7,6 +7,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -44,7 +45,7 @@ const FormById = ({history, match}) => {
         history.push("/");
     }
         dispatch(formDetails(match.params.id));
-    }, [dispatch, match.params.id, success]);
+    }, [dispatch, match.params.id, success, userInfo, history]);
 
     const goBack = (e) => {
       history.push("/form");
@@ -57,6 +58,14 @@ const FormById = ({history, match}) => {
     }
     return (
         <div >
+
+<Helmet>
+        <title>User Details</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
          
           <div className={classes.root}>
           <Typography variant="h4"> User Form Details</Typography>

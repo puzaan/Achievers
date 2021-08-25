@@ -6,6 +6,7 @@ import { Section } from 'components/organisms';
 import { Hero,Questions, SidePage} from './components';
 
 import { page } from './data';
+import { Helmet } from 'react-helmet';
 
 
 const useStyles = makeStyles(theme => ({
@@ -100,6 +101,13 @@ const CourseDetail = ({ match }) => {
 
   return (
 <div>
+<Helmet>
+        <title>Course Detail Page</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
 <Hero data={course}/>
     <div className={classes.root}>
       <Section className={clsx(classes.pagePaddingTop, classes.section)}>

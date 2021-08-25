@@ -10,12 +10,12 @@ import {
   RadioGroup,
   Radio,
 } from '@material-ui/core';
-import { EnrollForm } from '../../../../action/enrollAction';
 import {createDemoClass} from 'action/demoClassAction'
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Message } from 'components/message.js';
 import { page } from 'views/CourseDetail/data';
+import Loder from 'views/Loder';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -150,6 +150,7 @@ const dispatch = useDispatch();
           </Grid>
           <Grid item xs={12}>
             {error && <Message severity="error">{error}</Message>}
+            {loading && <Loder/>}
           </Grid>
         </Grid>
       </form>

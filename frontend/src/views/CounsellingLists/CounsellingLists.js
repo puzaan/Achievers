@@ -3,12 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Typography, } from "@material-ui/core";
 import { DataGrid } from '@material-ui/data-grid';
 import { counsellingLists} from "action/counselingAction";
-import DeleteIcon from "@material-ui/icons/Delete";
+//import DeleteIcon from "@material-ui/icons/Delete";
 import { Link } from "react-router-dom";
 import Loder from 'views/Loder';
 import Alerts from 'views/Alert/Alert';
 import { makeStyles } from "@material-ui/styles";
 import {logout} from 'action/userAction'
+import { Helmet } from "react-helmet";
 
 const useStyle = makeStyles(() => ({
     userListEdit: {
@@ -88,14 +89,20 @@ const CounsellingLists = ({ history, match}) => {
             dispatch(logout())
         }
         
-    }, [dispatch, history]);
+    }, [dispatch, history,userInfo]);
     
   
 
 
     return (
         <div>
-    
+    <Helmet>
+        <title>Counselling List Page</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
+        />
+      </Helmet>
             <div style={{ height: 400,width:'90% ', padding: "20px" , marginLeft: "50px"}}>
                 <Typography variant="h4"> All Counselling Lists</Typography>
                 {error && <Alerts severity="error"> {error}</Alerts>}
