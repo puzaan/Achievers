@@ -57,11 +57,12 @@ const Works = props => {
                     text={
                       <Typography align="left" variant="h6">
                         {' '}
-                        {item.review}{' '}
+                        {item.authorReview}{' '}
                       </Typography>
                     }
-                    authorName={` Name: ${item.name}`}
+                    authorName={` Name: ${item.authorName}`}
                     authorPhoto={item.authorPhoto}
+                    authorTitle={` Position: ${item.position}`}
                   />
                 ))}
               </div>
@@ -82,10 +83,10 @@ const Works = props => {
                     text={
                       <Typography align="left" variant="h6">
                         {' '}
-                        {item.review}{' '}
+                        {item.authorReview}{' '}
                       </Typography>
                     }
-                    authorName={` Name:${item.name}`}
+                    authorName={` Name:${item.authorName}`}
                     // authorTitle={` Enrolled in: ${item.enroll}`}
                     authorPhoto={item.authorPhoto}
                   />

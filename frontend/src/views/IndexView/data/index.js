@@ -138,28 +138,28 @@ export const workReviews = [
       src: 'https://www.unifiedinfotech.net/assets/images/new-home/Sofy-portfolio@1.5x.jpg',
       srcSet: 'https://scontent.fktm8-1.fna.fbcdn.net/v/t1.6435-9/35226243_855164508014935_2463990675784335360_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=174925&_nc_ohc=92Fw06YAeKQAX-yGprt&_nc_oc=AQm2V3OUl_WRcSr4ywzA7n6yW8qstg6DwpnqYGT6gNKuD1yqMKcNyKoYx0DFa3Lci6w&_nc_ht=scontent.fktm8-1.fna&oh=3909dda07bffd291efd04652b0adb280&oe=614983FA',
     },
-    authorName: `Intern `,
-    authorOccupation: `I thoroughly enjoyed my internship and now have very valuable experience under my belt.I feel that quality internships are essential to develop key skills that we can't get in a classroom. While doing internship i learned more reactjs with backend implemented in Node.js and Mongoose as database, hosted on AWS. `,
-    feedback:
-      'Pujan Shrestha',
+    authorName: `Pujan Shrestha`,
+    authorReview: `I thoroughly enjoyed my internship and now have very valuable experience under my belt.I feel that quality internships are essential to develop key skills that we can't get in a classroom. While doing internship i learned more reactjs with backend implemented in Node.js and Mongoose as database, hosted on AWS. `,
+    position:
+      'intern',
   },
   {
     authorPhoto: {
       src: 'https://www.unifiedinfotech.net/assets/images/new-home/colorcon-portfolio@1.5x.jpg',
       srcSet: 'https://www.unifiedinfotech.net/assets/images/new-home/colorcon-portfolio@1x.jpg',
     },
-    authorName: 'Re-imagined and custom engineered the B2B ordering portal for this $500m global pharma giant.',
-    authorOccupation: 'As consulting-led partners, we audited, re-designed and engineered a highly secure and gated ordering portal for Coloron’s customers to place, manage & track orders, while also managing their accounts, ledgers, order history, documents, compliances and other artifacts related to pharmaceutical components.',
-    feedback:
-'My Colorcon'  },
+    authorName: 'abc',
+    authorReview: 'As consulting-led partners, we audited, re-designed and engineered a highly secure and gated ordering portal for Coloron’s customers to place, manage & track orders, while also managing their accounts, ledgers, order history, documents, compliances and other artifacts related to pharmaceutical components.',
+    position:
+''  },
   {
     authorPhoto: {
       src: 'https://www.unifiedinfotech.net/assets/images/new-home/Sofy-portfolio@1.5x.jpg',
       srcSet: 'https://www.unifiedinfotech.net/assets/images/new-home/Sofy-portfolio@1x.jpg',
     },
-    authorName:'Custom engineered this robust on-demand streaming platform with AI and ML capabilities.',
-    authorOccupation: 'Unified Infotech designed and developed this highly sophisticated on-demand streaming platform for short movies, along with advanced AI capabilities and usage of big data.',
-    feedback:'Sofy Tv'  },
+    authorName:'abc',
+    authorReview: 'Unified Infotech designed and developed this highly sophisticated on-demand streaming platform for short movies, along with advanced AI capabilities and usage of big data.',
+    position:''  },
 ];
 
 
@@ -268,6 +268,16 @@ export const response = [
   }
 ]
 
+export const success =[
+  {
+    name:'pujan Shrestha',
+    description: `I thoroughly enjoyed my internship and now have very valuable experience under my belt.I feel that quality internships are essential to develop key skills that we can't get in a classroom. While doing internship i learned more reactjs with backend implemented in Node.js and Mongoose as database, hosted on AWS. `,
+    authorPhoto: {
+      src: 'https://assets.maccarianagency.com/the-front/photos/people/veronica-adams.jpg',
+      
+    },
+  }
+]
 
 
 export const articles = [
