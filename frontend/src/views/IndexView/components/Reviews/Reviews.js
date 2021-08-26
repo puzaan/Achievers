@@ -5,23 +5,23 @@ import Swiper from 'swiper';
 import { makeStyles, useTheme  } from '@material-ui/core/styles';
 import { SectionHeader} from 'components/molecules';
 import { CardReview } from 'components/organisms';
-import { Typography, useMediaQuery } from '@material-ui/core';
+import { Grid, Typography, useMediaQuery } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   swiperContainer: {
     width: '100%',
     textAlign: "left",
     position: 'relative',
-    // maxWidth: 600,
   },
   swiperNav: {
     '& .swiper-button-prev, & .swiper-button-next': {
-      width: theme.spacing(6),
-      height: theme.spacing(6),
+      margin:'30px',
+      width: theme.spacing(4),
+      height: theme.spacing(4),
       padding: theme.spacing(2),
       background: theme.palette.primary.main,
       borderRadius: '100%',
-      boxShadow: `0 2px 10px 0 ${theme.palette.cardShadow}`,
+      boxShadow: `0 2px 2px 0 ${theme.palette.cardShadow}`,
       border: `2px solid ${theme.palette.background.paper}`,
       '&:after': {
         fontSize: 'initial',
@@ -38,10 +38,13 @@ const Reviews = props => {
   const isXs = useMediaQuery(theme.breakpoints.down('xs'), {
     defaultMatches: true,
   });
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
   React.useEffect(() => {
     new Swiper('.swiper-container', {
       slidesPerView: 1,
-      spaceBetween: isXs ? 15 : 0,
+      spaceBetween: isXs ? 17 : 0,
       
       pagination: {
         el: '.swiper-container .swiper-pagination',
@@ -49,7 +52,7 @@ const Reviews = props => {
         clickable: true,
       },
       autoplay: {
-        delay: 8000,
+        delay: 15000,
       },
       navigation: {
         nextEl: '.swiper-container .swiper-button-next',
@@ -61,6 +64,9 @@ const Reviews = props => {
 
   return (
     <div className={className} data-aos="fade-up" {...rest}>
+      <div>
+        <Grid container spacing={isMd ? 2 : 1}>
+    <Grid item xs={12} sm={12} data-aos="fade-up">
       <SectionHeader
         title="Students Review"
         subtitle="Take a quick glance at some of our student response."
@@ -87,6 +93,10 @@ const Reviews = props => {
             <div className={clsx('swiper-button-next')} />
           </div>
         )}
+      </div>
+      
+      </Grid>
+      </Grid>
       </div>
     </div>
   );
