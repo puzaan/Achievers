@@ -99,15 +99,14 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
       <br />
       <TypedText
         component="span"
-        variant="h2"
+        variant="h3"
         color="secondary"
         className={classes.fontWeight900}
         typedProps={{
           strings: [
-            'Enhancing business agility',
-            'Efficiency with cuttin-edge web and mob Solution',
-            'startup',
-            'online course',
+            'Enhancing business',
+            'Startup',
+            'Online course',
             'and many more...',
           ],
           typeSpeed: 100,
@@ -125,7 +124,7 @@ const Hero = ({ themeMode = 'light', className, ...rest }) => {
       variant="contained"
       color='primary'
       component="a"
-      href="/home"
+      href="/about"
       
     >
       Read more

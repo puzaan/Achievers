@@ -10,6 +10,12 @@ import {
 } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { HeroShaped, Map } from 'components/organisms';
+import CallIcon from '@material-ui/icons/Call';
+import EmailIcon from '@material-ui/icons/Email';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import {contacts} from '../../../About/data'
 
 const useStyles = makeStyles(() => ({
   map: {
@@ -31,8 +37,7 @@ const Contact = props => {
         leftSide={
           <div>
             <SectionHeader
-              title="Contact us"
-              subtitle="Keep track of what's happening with your data, change permissions, and run reports against your data anywhere in the world. Keep track of what's happening with your data, change permissions."
+              title="Contact us for information"
               subtitleProps={{
                 variant: 'body1',
                 color: 'textPrimary',
@@ -43,15 +48,14 @@ const Contact = props => {
             <List disablePadding>
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
-                  <Avatar
-                    src="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-phone.png"
-                    srcSet="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-phone@2x.png 2x"
-                    className={classes.icon}
-                  />
+                <Avatar
+                  >
+                    <CallIcon />
+                  </Avatar>
                 </ListItemAvatar>
                 <ListItemText
                   primary="Phone"
-                  secondary="+01 659-657-0133"
+                  secondary={contacts.phone}
                   primaryTypographyProps={{
                     variant: 'subtitle1',
                     color: 'textSecondary',
@@ -65,14 +69,14 @@ const Contact = props => {
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
                   <Avatar
-                    src="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-mail.png"
-                    srcSet="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-mail@2x.png 2x"
-                    className={classes.icon}
-                  />
+                   
+                  >
+                    <EmailIcon />
+                  </Avatar>
                 </ListItemAvatar>
                 <ListItemText
                   primary="Email"
-                  secondary="achievergroups@gmail.com"
+                  secondary={contacts.email}
                   primaryTypographyProps={{
                     variant: 'subtitle1',
                     color: 'textSecondary',
@@ -85,15 +89,15 @@ const Contact = props => {
               </ListItem>
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
-                  <Avatar
-                    src="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-pin.png"
-                    srcSet="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-pin@2x.png 2x"
-                    className={classes.icon}
-                  />
+                <Avatar
+                   
+                   >
+                     <LocationOnIcon />
+                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
                   primary="Head Office"
-                  secondary="Putalisadak"
+                  secondary={contacts.address}
                   primaryTypographyProps={{
                     variant: 'subtitle1',
                     color: 'textSecondary',
@@ -104,6 +108,49 @@ const Contact = props => {
                   }}
                 />
               </ListItem>
+              <ListItem disableGutters data-aos="fade-up">
+                <ListItemAvatar>
+                <Avatar
+                   
+                   >
+                     <FacebookIcon />
+                   </Avatar>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="Facebook Page"
+                  secondary={contacts.facebook}
+                  primaryTypographyProps={{
+                    variant: 'subtitle1',
+                    color: 'textSecondary',
+                  }}
+                  secondaryTypographyProps={{
+                    variant: 'subtitle1',
+                    color: 'textPrimary',
+                  }}
+                />
+              </ListItem>
+              <ListItem disableGutters data-aos="fade-up">
+                <ListItemAvatar>
+                <Avatar
+                   
+                   >
+                     <InstagramIcon />
+                   </Avatar>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="Instagram Page"
+                  secondary={contacts.instagram}
+                  primaryTypographyProps={{
+                    variant: 'subtitle1',
+                    color: 'textSecondary',
+                  }}
+                  secondaryTypographyProps={{
+                    variant: 'subtitle1',
+                    color: 'textPrimary',
+                  }}
+                />
+              </ListItem>
+            
             </List>
           </div>
         }

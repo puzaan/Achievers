@@ -6,8 +6,6 @@ import {
   Grid,
   List,
   ListItem,
-  Avatar,
-  ListItemAvatar,
   Typography,
 } from '@material-ui/core';
 import { Image } from 'components/atoms';
@@ -49,8 +47,7 @@ const Features = props => {
           <Section>
             <>
             <SectionHeader
-              title="Monitor and analyze usage patterns."
-              subtitle="Keep track of what's happening with your data, change permissions, and run reports against your data anywhere in the world."
+              title="Our mission is to be a role model technology company."
               align="left"
               data-aos="fade-up"
               titleProps={{
@@ -61,24 +58,24 @@ const Features = props => {
               }}
             />
             <List>
-              {data.map((item, index) => (
-                <ListItem disableGutters key={index} data-aos="fade-up">
-                  <ListItemAvatar>
+              {/* {data.map((item, index) => ( */}
+                <ListItem disableGutters  data-aos="fade-up">
+                  {/* <ListItemAvatar>
                     <Avatar
                       src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
                       
                       
                     />
-                  </ListItemAvatar>
+                  </ListItemAvatar> */}
                   <Typography
                     variant="body1"
                     color="textwhite" 
                     className= {classes.textWhite}
                   >
-                    {item}
+                   But mainly we want to be great; defined by the brilliant Leapfroggers that we work with, unrelenting pride in craftsmanship, and creating impact in industries and ecosystems. And we're just getting started. If you can flat out code, design, and understand and embrace complex business and technical problems - please keep reading.
                   </Typography>
                 </ListItem>
-              ))}
+              {/* // ))} */}
             </List>
             </>
           </Section>

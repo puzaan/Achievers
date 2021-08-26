@@ -28,7 +28,7 @@ const Gallery = props => {
         subtitle="After 3 days all of your offers will arrive and you will have another 7 days to select your new company."
         data-aos="fade-up"
       />
-      <GridList cellHeight={isMd ? 360 : 260} cols={4} spacing={isMd ? 24 : 8}>
+      <GridList cellHeight={isMd ? 600 : 350} cols={4} spacing={isMd ? 5 : 8}>
         {data.map((item, index) => (
           <GridListTile key={index} cols={isMd ? item.cols : 4 || 1}>
             <Image

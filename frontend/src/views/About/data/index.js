@@ -126,34 +126,80 @@ export const mapData = [
 export const gallery = [
   {
     image: {
-      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery1.jpg',
+      src: 'https://cdn.discordapp.com/attachments/879992345968377866/879998355151941672/IMG_20210407_080020.jpg',
       srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery1@2x.jpg 2x',
+    },
+    title: 'gallery',
+    cols: 3,
+  },
+  {
+    image: {
+      src: 'https://cdn.discordapp.com/attachments/879992345968377866/879998652892979200/IMG_20210407_094912.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery2@2x.jpg 2x',
     },
     title: 'gallery',
     cols: 1,
   },
   {
     image: {
-      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery3.jpg',
+      src: 'https://cdn.discordapp.com/attachments/879992345968377866/879998645360013352/IMG_20210407_081138.jpg',
       srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery3@2x.jpg 2x',
     },
     title: 'gallery',
     cols: 3,
   },
+ 
   {
     image: {
-      src: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery2.jpg',
-      srcSet: 'https://assets.maccarianagency.com/the-front/photos/expo-gallery/gallery2@2x.jpg 2x',
+      src: 'https://cdn.discordapp.com/attachments/879992345968377866/879998652184162344/IMG_20210407_094826.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/coworking/place3@2x.jpg 2x',
+    },
+    title: 'gallery',
+    cols: 1,
+  },
+
+  {
+    image: {
+      src: '  https://cdn.discordapp.com/attachments/879992345968377866/879998666922917919/IMG_20210407_104021.jpg      ',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/coworking/place3@2x.jpg 2x',
+    },
+    title: 'gallery',
+    cols: 1,
+  },
+  {
+    image: {
+      src: '  https://cdn.discordapp.com/attachments/879992345968377866/879998660975427614/IMG_20210407_094924.jpg      ',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/coworking/place3@2x.jpg 2x',
     },
     title: 'gallery',
     cols: 3,
   },
   {
     image: {
-      src: 'https://assets.maccarianagency.com/the-front/photos/coworking/place3.jpg',
+      src: '  https://cdn.discordapp.com/attachments/879992345968377866/879998667090722846/IMG_20210407_103657_1.jpg      ',
       srcSet: 'https://assets.maccarianagency.com/the-front/photos/coworking/place3@2x.jpg 2x',
     },
     title: 'gallery',
-    cols: 1,
+    cols: 4,
   },
+  {
+    image: {
+      src: 'https://cdn.discordapp.com/attachments/879992345968377866/879998671389863956/IMG_20210407_104059.jpg',
+      srcSet: 'https://assets.maccarianagency.com/the-front/photos/coworking/place3@2x.jpg 2x',
+    },
+    title: 'gallery',
+    cols: 4,
+  },
+ 
+
 ];
+
+
+export const contacts = {  name:'Achiever Groups',
+  phone: '01-4221824,9881261300',
+  email: 'info@achivergroups.com',
+  website: 'theachievergroups.com',
+  facebook: '@achievergroups',
+  instagram: 'achievergroups',
+  address: 'Putalisadak,Kathmandu,Nepal'
+}

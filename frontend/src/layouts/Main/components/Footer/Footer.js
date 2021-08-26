@@ -16,6 +16,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
+import {contacts} from '../../../../views/About/data'
 
 
 const useStyles = makeStyles(theme => ({
@@ -263,7 +264,7 @@ const Footer = props => {
                 >
                   <ListItemText
                     primary="Phone"
-                    secondary="+39 659-657-0133"
+                    secondary={contacts.phone}
                     primaryTypographyProps={{
                       variant: 'subtitle1',
                       color: 'textSecondary',
@@ -281,7 +282,7 @@ const Footer = props => {
                 >
                   <ListItemText
                     primary="Email"
-                    secondary="achievergroups@gmail.com"
+                    secondary={contacts.email}
                     primaryTypographyProps={{
                       variant: 'subtitle1',
                       color: 'textSecondary',
@@ -299,7 +300,7 @@ const Footer = props => {
                 >
                   <ListItemText
                     primary="Office"
-                    secondary="Putalisadak, kathmandu Nepal"
+                    secondary={contacts.address}
                     primaryTypographyProps={{
                       variant: 'subtitle1',
                       color: 'textSecondary',
@@ -310,6 +311,45 @@ const Footer = props => {
                     }}
                   />
                 </ListItem>
+              
+                <ListItem
+                  className={classes.menuListContainer}
+                  disableGutters
+                  data-aos="fade-up"
+                >
+                  <ListItemText
+                    primary="Facebook Page"
+                    secondary={contacts.facebook}
+                    primaryTypographyProps={{
+                      variant: 'subtitle1',
+                      color: 'textSecondary',
+                    }}
+                    secondaryTypographyProps={{
+                      variant: 'subtitle1',
+                      color: 'textSecondary',
+                    }}
+                  />
+                </ListItem>
+                <ListItem
+                  className={classes.menuListContainer}
+                  disableGutters
+                  data-aos="fade-up"
+                >
+                  <ListItemText
+                    primary="Instagram Page"
+                    secondary={contacts.instagram}
+                    primaryTypographyProps={{
+                      variant: 'subtitle1',
+                      color: 'textSecondary',
+                    }}
+                    secondaryTypographyProps={{
+                      variant: 'subtitle1',
+                      color: 'textSecondary',
+                    }}
+                  />
+                </ListItem>
+              
+              
               </List>
             </Grid>
           </Grid>

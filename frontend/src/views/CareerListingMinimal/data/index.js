@@ -1,5 +1,5 @@
 export const features = [
-  'Affordable, scalable and performant. The perfect solution for small apps.',
+  `We're hopeless fans of our chosen crafts. We strive for continuous improvement and growth because we’re passionate about what we do.`,
   'A mid-sized solution for businesses undergoing rapid user growth.',
   "A farm of machines entirely dedicated to your company's storage needs.",
   'A mid-sized solution for businesses undergoing rapid user growth.',

@@ -15,7 +15,7 @@ const Jobs = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Let’s find you an open position."
+        title="Current Openings"
         subtitleColor="textPrimary"
         data-aos="fade-up"
       />

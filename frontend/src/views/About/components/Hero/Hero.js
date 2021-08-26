@@ -54,7 +54,7 @@ const Hero = props => {
       <Section className={classes.section}>
         <SectionHeader
           title="About us"
-          subtitle="We are founded by a leading academic and researcher in the field of Industrial Systems Engineering."
+          subtitle="Achiever groups were founded by experienced information technology professionals and instructors who decided to concentrate in the hottest and fastest growing Information Technology (IT) areas: Machine learning , Web development ,Enterprise resource planning (ERP), automated software testing, database administration,IOT and Digital marketing. Our instructors also interview prospective candidates for permanent and consulting positions. They know first hand what skills students need to start a career in the IT field, pass job interviews, and successfully perform on the first job assignment. Our instructors work very hard and with a lot of personal attention to transfer that knowledge to each student and to keep the student well informed in all the latest industry developments."
           align="left"
           data-aos="fade-up"
           disableGutter

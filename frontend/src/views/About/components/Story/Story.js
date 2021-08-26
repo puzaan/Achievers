@@ -39,8 +39,8 @@ const Story = props => {
         >
           <div>
             <SectionHeader
-              title="Our story"
-              subtitle="If we're no longer the right solution for you, we'll allow you to export and take your data at anytime for any reason. If we're no longer the right solution for you, we'll allow you to export and take your data at anytime for any reason.If we're no longer the right solution for you, we'll allow you to export and take your data at anytime for any reason.If we're no longer the right solution for you, we'll allow you to export and take your data at anytime for any reason.If we're no longer the right solution for you, we'll allow you to export and take your data at anytime for any reason."
+              title="Our Commitment"
+              subtitle="We are committed to providing the best professional education to our students and to turn them into knowledgeable and successful information technology professionals. For that reason our company invests in new facilities, the latest software and newest hardware and hires talented developers and assistants. We provide our graduates with job search assistance, employment opportunities, and help after a graduate has found a job."
               align="left"
               disableGutter
               subtitleProps={{

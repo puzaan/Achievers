@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Button,} from '@material-ui/core';
+import { Grid} from '@material-ui/core';
 import { SectionHeader, IconAlternate } from 'components/molecules';
 import { CardBase, DescriptionListIcon } from 'components/organisms';
 
@@ -45,11 +45,11 @@ const Process = props => {
             </CardBase>
           </Grid>
         ))}
-        <Grid item container xs={12} justify="center">
+        {/* <Grid item container xs={12} justify="center">
           <Button variant="contained" size="large" color="primary" >
             Contact us
           </Button>
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

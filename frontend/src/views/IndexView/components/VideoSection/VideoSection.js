@@ -45,6 +45,19 @@ const VideoSection = props => {
     defaultMatches: true,
   });
 
+  const scrollTo = id => {
+    setTimeout(() => {
+      const element = document.querySelector(`#${id}`);
+      if (!element) {
+        return;
+      }
+
+      window.scrollTo({ left: 0, top: element.offsetTop, behavior: 'smooth' });
+    });
+  };
+
+
+
   return (
     <div className={className} {...rest}>
       <Grid
@@ -67,9 +80,10 @@ const VideoSection = props => {
                     variant="contained"
                     color="primary"
                     size={isMd ? 'large' : 'medium'}
+                    onClick={()=>scrollTo('course')}
                     
                   >
-                    Contact Us
+                    See Courses
                   </Button>,
                   
                 ]}
