@@ -16,6 +16,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 import {contacts} from '../../../../views/About/data'
 
 
@@ -60,6 +61,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '20px',
     padding: 0,
     marginRight: theme.spacing(1),
+    
     color: 'rgba(255,255,255,.6)',
     '&:hover': {
       background: 'transparent',
@@ -70,6 +72,8 @@ const useStyles = makeStyles(theme => ({
   },
   icon: {
     fontSize: 24,
+    color: 'white'
+    
   },
   menuListContainer: {
     padding: '0 !important',
@@ -166,16 +170,23 @@ const Footer = props => {
               </ListItem>
               <ListItem disableGutters>
                 <IconButton className={classes.socialIcon}>
+                  <a href='https://www.facebook.com/achievergroups' target="_blank">
                   <FacebookIcon className={classes.icon} />
+                  </a>
                 </IconButton>
+                
                 <IconButton className={classes.socialIcon}>
+                <a href=" https://www.instagram.com/achievergroups/" target="_blank">
                   <InstagramIcon className={classes.icon} />
+                  </a>
                 </IconButton>
-                <IconButton className={classes.socialIcon}>
+                {/* <IconButton className={classes.socialIcon}>
                   <TwitterIcon className={classes.icon} />
-                </IconButton>
+                </IconButton> */}
                 <IconButton className={classes.socialIcon}>
-                  <PinterestIcon className={classes.icon} />
+                  <a href='https://www.google.com/maps/place/Achiever+Groups+Software+%26+Research+Centre/@27.7021308,85.3203425,700m/data=!3m2!1e3!4b1!4m5!3m4!1s0x39eb195da1bc6e81:0x554ecdb446d5b245!8m2!3d27.7021308!4d85.3222312' target='_blank' >
+                  <LocationOnIcon className={classes.icon} />
+                  </a>
                 </IconButton>
               </ListItem>
             </List>
@@ -280,6 +291,8 @@ const Footer = props => {
                   disableGutters
                   data-aos="fade-up"
                 >
+                  <div>
+                    <a>
                   <ListItemText
                     primary="Email"
                     secondary={contacts.email}
@@ -292,12 +305,16 @@ const Footer = props => {
                       color: 'textSecondary',
                     }}
                   />
+                  </a>
+                  </div>
                 </ListItem>
                 <ListItem
                   className={classes.menuListContainer}
                   disableGutters
                   data-aos="fade-up"
                 >
+                  <div>
+                    <a href='https://www.google.com/maps/place/Achiever+Groups+Software+%26+Research+Centre/@27.7021355,85.3200425,700m/data=!3m2!1e3!4b1!4m5!3m4!1s0x39eb195da1bc6e81:0x554ecdb446d5b245!8m2!3d27.7021308!4d85.3222312' target="_blank">
                   <ListItemText
                     primary="Office"
                     secondary={contacts.address}
@@ -310,6 +327,8 @@ const Footer = props => {
                       color: 'textSecondary',
                     }}
                   />
+                  </a>
+                  </div>
                 </ListItem>
               
                 <ListItem
@@ -317,6 +336,8 @@ const Footer = props => {
                   disableGutters
                   data-aos="fade-up"
                 >
+                  <div>
+                    <a href='https://www.facebook.com/achievergroups'  target="_blank">
                   <ListItemText
                     primary="Facebook Page"
                     secondary={contacts.facebook}
@@ -329,12 +350,16 @@ const Footer = props => {
                       color: 'textSecondary',
                     }}
                   />
+                  </a>
+                  </div>
                 </ListItem>
                 <ListItem
                   className={classes.menuListContainer}
                   disableGutters
                   data-aos="fade-up"
                 >
+                  <div>
+                    <a href='https://www.instagram.com/achievergroups/' target="_blank">
                   <ListItemText
                     primary="Instagram Page"
                     secondary={contacts.instagram}
@@ -347,6 +372,8 @@ const Footer = props => {
                       color: 'textSecondary',
                     }}
                   />
+                  </a>
+                  </div>
                 </ListItem>
               
               

@@ -7,6 +7,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Avatar,
+  
 } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
 import { HeroShaped, Map } from 'components/organisms';
@@ -15,7 +16,8 @@ import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import {contacts} from '../../../About/data'
+import {contacts} from '../../../About/data';
+import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles(() => ({
   map: {
@@ -95,6 +97,8 @@ const Contact = props => {
                      <LocationOnIcon />
                    </Avatar>
                 </ListItemAvatar>
+                <div>
+                  <a href='https://www.google.com/maps/place/Achiever+Groups+Software+%26+Research+Centre/@27.7021355,85.3200425,700m/data=!3m2!1e3!4b1!4m5!3m4!1s0x39eb195da1bc6e81:0x554ecdb446d5b245!8m2!3d27.7021308!4d85.3222312' target="_blank">
                 <ListItemText
                   primary="Head Office"
                   secondary={contacts.address}
@@ -107,6 +111,8 @@ const Contact = props => {
                     color: 'textPrimary',
                   }}
                 />
+                </a>
+                </div>
               </ListItem>
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
@@ -116,6 +122,8 @@ const Contact = props => {
                      <FacebookIcon />
                    </Avatar>
                 </ListItemAvatar>
+                <div>
+                <a href='https://www.facebook.com/achievergroups' target="_blank"> 
                 <ListItemText
                   primary="Facebook Page"
                   secondary={contacts.facebook}
@@ -128,6 +136,8 @@ const Contact = props => {
                     color: 'textPrimary',
                   }}
                 />
+                </a>
+               </div>
               </ListItem>
               <ListItem disableGutters data-aos="fade-up">
                 <ListItemAvatar>
@@ -137,6 +147,8 @@ const Contact = props => {
                      <InstagramIcon />
                    </Avatar>
                 </ListItemAvatar>
+                <div>
+                <a href = 'https://www.instagram.com/achievergroups/' target="_blank">
                 <ListItemText
                   primary="Instagram Page"
                   secondary={contacts.instagram}
@@ -149,8 +161,10 @@ const Contact = props => {
                     color: 'textPrimary',
                   }}
                 />
+                </a>
+                </div>
               </ListItem>
-            
+              
             </List>
           </div>
         }
