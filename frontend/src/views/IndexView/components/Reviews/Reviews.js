@@ -6,19 +6,19 @@ import { makeStyles, useTheme  } from '@material-ui/core/styles';
 import { SectionHeader} from 'components/molecules';
 import { CardReview } from 'components/organisms';
 import { Grid, Typography, useMediaQuery } from '@material-ui/core';
-
+import {response} from '../../data/index'
 const useStyles = makeStyles(theme => ({
   swiperContainer: {
     width: '100%',
     textAlign: "left",
-    position: 'relative',
+  
   },
   swiperNav: {
     '& .swiper-button-prev, & .swiper-button-next': {
       margin:'30px',
       width: theme.spacing(4),
       height: theme.spacing(4),
-      padding: theme.spacing(2),
+      padding: theme.spacing(1),
       background: theme.palette.primary.main,
       borderRadius: '100%',
       boxShadow: `0 2px 2px 0 ${theme.palette.cardShadow}`,
@@ -44,7 +44,7 @@ const Reviews = props => {
   React.useEffect(() => {
     new Swiper('.swiper-container', {
       slidesPerView: 1,
-      spaceBetween: isXs ? 17 : 0,
+      spaceArround: isXs ? 50 : 0,
       
       pagination: {
         el: '.swiper-container .swiper-pagination',
@@ -73,7 +73,7 @@ const Reviews = props => {
       />
       <div className={clsx('swiper-container', classes.swiperContainer)}>
         <div className="swiper-wrapper">
-          {data.map((item, index) => (
+          {response.map((item, index) => (
             <CardReview
               key={index}
               className={'swiper-slide'}

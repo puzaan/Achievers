@@ -6,7 +6,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { SectionHeader } from 'components/molecules';
 import { CardReview } from 'components/organisms';
 import { Grid, Typography, useMediaQuery } from '@material-ui/core';
-
+import {clientReview} from '../../data/index'
 const useStyles = makeStyles(theme => ({
   swiperContainer: {
     width: '100%',
@@ -27,7 +27,7 @@ const Works = props => {
   React.useEffect(() => {
     new Swiper('.swiper-container', {
       slidesPerView: 1,
-      spaceBetween:isXs ? 17 : 0,
+      spaceBetween:isXs ? 5 : 0,
 
       pagination: {
         el: '.swiper-container .swiper-pagination',
@@ -43,7 +43,7 @@ const Works = props => {
   return (
     <div className={className} data-aos="fade-up" {...rest}>
       <div>
-        <Grid container spacing={isMd ? 4 : 2}>
+        <Grid container spacing={isMd ? 6 : 0}>
           <Grid item xs={12} sm={6} data-aos="fade-up">
             <SectionHeader title="Our success Story" />
             <div className={clsx('swiper-container', classes.swiperContainer)}>
@@ -74,7 +74,7 @@ const Works = props => {
             <SectionHeader title="Client Review" />
             <div className={clsx('swiper-container', classes.swiperContainer)}>
               <div className="swiper-wrapper">
-                {data.map((item, index) => (
+                {clientReview.map((item, index) => (
                   <CardReview
                     key={index}
                     className={'swiper-slide'}
@@ -82,12 +82,12 @@ const Works = props => {
                     noShadow
                     text={
                       <Typography align="left" variant="h6">
-                        {' '}
-                        {item.authorReview}{' '}
+                        
+                        {item.review}
                       </Typography>
                     }
-                    authorName={` Name:${item.authorName}`}
-                    // authorTitle={` Enrolled in: ${item.enroll}`}
+                    // authorName={` Name:${item.authorName}`}
+                    // // authorTitle={` Enrolled in: ${item.enroll}`}
                     authorPhoto={item.authorPhoto}
                   />
                 ))}

@@ -39,7 +39,7 @@ const Categories = props => {
             key={index}
             item
             container
-            alignItems="center"
+            alignItems="left"
             direction="column"
             xs={12}
             sm={6}
@@ -51,7 +51,7 @@ const Categories = props => {
               variant="outlined"
               align={isMd ? 'left' : 'center'}
               liftUp
-              title={item.title}
+              title1={item.title}
               subtitle={item.duration}
               description={item.iternship}
               subdescription={item.class}

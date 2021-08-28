@@ -40,6 +40,7 @@ const Process = props => {
                 }
                 title={item.title}
                 subtitle={item.description}
+                
                 align="left"
               />
             </CardBase>

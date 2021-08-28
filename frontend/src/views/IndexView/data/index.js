@@ -239,23 +239,23 @@ export const response = [
   {
     name: 'Raj Chaulagain',
     enroll: "Flutter",
-    review:"Achiever has implemented assignment and project led teaching-learning approach, which has personally helped me to learn new things fast. Teachers are supportive and friendly which made the experience here more enhancd. I must say that i am really impressed with how well integrated LMS is. Congratulations to the development team of LMS."
+    review:"Achiever has implemented assignment and project led teaching-learning approach, which has personally helped me to learn new things fast. Teachers are supportive and friendly which made the experience here more enhancd. I must say that i am really impressed with how well integrated LMS is."
   },
   {
     name: 'Piyush Yadav',
     enroll: "Flutter",
-    review:"I got enrolled in flutter development class and had an amazing experience through the teaching faculty. "
+    review:"I got enrolled in flutter development class and had an amazing experience through the teaching faculty."
   },
   {
     name: 'Salin Thapa',
     enroll: "Flutter",
-    review:"The flutter classes are very useful and interesting. Our flutter sir is also very helpful friendly and is always ready to help."
+    review:`The flutter classes are very useful and interesting. Our flutter sir is also very helpful friendly and is always ready to help.`
   },
-  {
-    name: 'Utsav Gole',
-    enroll: "Flutter",
-    review:""
-  },
+  // {
+  //   name: 'Utsav Gole',
+  //   enroll: "Flutter",
+  //   review:""
+  // },
   {
     name: 'Kunjan Rajbhandari',
     enroll: "Flutter",
@@ -264,7 +264,7 @@ export const response = [
   {
     name: 'Santosh Nepal',
     enroll: "React",
-    review:"Contact information and location of the institute can be provided in the site,Some word from  Alumnus should be added to the site and some words from the company head where the Alumnus work can also be added ."
+    review:"Contact information and location of the institute can be provided in the site,Some word from  Alumnus should be added to the site and some words from the company head where the Alumnus work can also be added."
   }
 ]
 
@@ -336,3 +336,26 @@ export const articles = [
     date: '03 March, 2019',
   },
 ];
+
+export const clientReview = [
+  {
+    name: '',
+    review: `We at Achiever's have a really relaxed but professional environment. We worked together as a family and team members. They not only showed their commitment and hard work in our project but also helped us take care of some points that got missed by us and did not belong to their scope. I’m very happy to have been associated with them.`
+  },
+  {
+    name: '',
+    review: `Achiever's is a great place to work driven by passion to create and deliver new ideas that are reflected in their work. Our relationship has been really productive and we have collectively been able to achieve great results. And they treated each of their customers with delicate care making them an excellent management team to work with.`
+  },
+  {
+    name: '',
+    review: `It's always great to work with a professional and committed company. Achiever's has been a software company that understands the importance of supporting and investing in their people. Our work relation has been productive So, I truly enjoyed my working with them and therefore have highest regards for this team and would highly recommend them.`
+  },
+  {
+    name: '',
+    review: `Achiever's is a great place which impacted my learning experience for good. I am grateful to be a part of this profoundly experienced team where I shared my thoughts with the open management team and passionate colleagues. What I really liked about Achiever's is the specific hosting platform that they use making it unique than any other software companies.`
+  },
+  {
+    name: '',
+    review: `I find myself very lucky to have been part of this amazing team who share their experience and work together in the spirit of mutual benefit. The best part that I found while working here was the work life balance providing me with various opportunities and care that they put into every request that I had made. We look forward to working with them as we grow.`
+  }
+]

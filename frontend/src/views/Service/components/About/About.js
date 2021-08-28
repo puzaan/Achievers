@@ -87,7 +87,7 @@ const About = props => {
             direction={index % 2 === 1 ? 'row-reverse' : 'row'}
             className={classes.listGrid}
           >
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <SectionHeader
                 titleVariant="h5"
                 title={item.title}
@@ -98,7 +98,7 @@ const About = props => {
               />
 
             </Grid>
-            <Grid item container justify="center" xs={12} sm={6}>
+            <Grid item container justify="center" xs={12} sm={12} md={6}>
               <Image src={item.image} alt= {item.title}
             //   {
             //   <ReactPlayer url={item.url} 

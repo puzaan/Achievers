@@ -44,14 +44,15 @@ const CardCategoryLink = props => {
     subdescription,
     subdescriptionProps,
     subtitle1,
+    title1,
     ...rest
   } = props;
 
   const classes = useStyles();
 
   let justifyGrid = 'flex-start';
-  if (align === 'center') {
-    justifyGrid = 'center';
+  if (align === 'left') {
+    justifyGrid = 'left';
   } else if (align === 'right') {
     justifyGrid = 'flex-end';
   }
@@ -74,7 +75,7 @@ const CardCategoryLink = props => {
         <Grid item xs={12}>
           <Typography
             variant="h6"
-            align={align}
+            align='left'
             className={classes.fontWeight700}
             {...titleProps}
           >
@@ -84,10 +85,20 @@ const CardCategoryLink = props => {
         </div>
         {subtitle && (
           <div>
+            <Grid item xs={12}>
+            <Typography
+              variant="h6"
+              align="left"
+              className={classes.fontWeight700}
+              {...subtitleProps}
+            >
+              {title1}
+            </Typography>
+          </Grid>
           <Grid item xs={12}>
             <Typography
               variant="subtitle1"
-              align={align}
+              align="left"
               color="textSecondary"
               {...subtitleProps}
             >
@@ -97,7 +108,7 @@ const CardCategoryLink = props => {
           <Grid item xs={12}>
             <Typography
               variant="subtitle1"
-              align={align}
+              align="left"
               color="textSecondary"
               {...subtitleProps}
             >
@@ -108,7 +119,7 @@ const CardCategoryLink = props => {
           <Grid item xs={12}>
             <Typography
               variant="subtitle1"
-              align={align}
+              align="left"
               color="textSecondary"
               {...subtitleProps}
             >
@@ -118,7 +129,7 @@ const CardCategoryLink = props => {
           <Grid item xs={12}>
             <Typography
               variant="subtitle1"
-              align={align}
+              align="left"
               color="textSecondary"
               {...subtitleProps}
             >
@@ -154,6 +165,7 @@ CardCategoryLink.defaultProps = {
   descriptionProps:{},
   subdescriptionProps:{},
   subtitle1: {},
+  title1:{},
 
 };
 
@@ -166,7 +178,7 @@ CardCategoryLink.propTypes = {
    descriptionProps: PropTypes.string.isRequired,
    subdescriptionProps : PropTypes.string.isRequired,
    subdescription : PropTypes.string.isRequired,
-
+   title1: PropTypes.string.isRequired,
   className: PropTypes.string,
   /**
    * Promo title to show inside the card
