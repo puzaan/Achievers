@@ -53,7 +53,7 @@ const ProfessionalCourse = props => {
             direction= 'row' 
             className={classes.listGrid}
           >
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <div>
               <SectionHeader
                 titleVariant="h5"
@@ -69,7 +69,7 @@ const ProfessionalCourse = props => {
           
               </div>
             </Grid>
-            <Grid item container justify="center" xs={12} sm={6}>
+            <Grid item container justify="center" xs={12} sm={12} md={6}>
               <Image src='https://purpletutor.com/wp-content/uploads/2020/12/purple-tutor11.svg' alt='Professional Courses' />
             </Grid>
           </Grid>

@@ -65,7 +65,7 @@ const Reviews = props => {
   return (
     <div className={className} data-aos="fade-up" {...rest}>
       <div>
-        <Grid container spacing={isMd ? 2 : 1}>
+        <Grid container spacing={isMd ? 2 : 0}>
     <Grid item xs={12} sm={12} data-aos="fade-up">
       <SectionHeader
         title="Students Review"

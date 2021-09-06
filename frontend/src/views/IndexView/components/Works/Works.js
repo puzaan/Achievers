@@ -43,8 +43,8 @@ const Works = props => {
   return (
     <div className={className} data-aos="fade-up" {...rest}>
       <div>
-        <Grid container spacing={isMd ? 6 : 0}>
-          <Grid item xs={12} sm={6} data-aos="fade-up">
+        <Grid container spacing={isMd ? 5 : 0}>
+          <Grid item xs={12} sm={12} md={6} data-aos="fade-up">
             <SectionHeader title="Our success Story" />
             <div className={clsx('swiper-container', classes.swiperContainer)}>
               <div className="swiper-wrapper">
@@ -70,7 +70,7 @@ const Works = props => {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={6} data-aos="fade-up">
+          <Grid item xs={12} sm={12} md = {6} data-aos="fade-up">
             <SectionHeader title="Client Review" />
             <div className={clsx('swiper-container', classes.swiperContainer)}>
               <div className="swiper-wrapper">

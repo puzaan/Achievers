@@ -16,7 +16,7 @@ export const login = (email, password) => async (dispatch) => {
         //     email,
         //     password,
         // });
-        const { data } = await axios.post("http://13.233.151.81:5000/api/users/admin", {
+        const { data } = await axios.post("http://localhost:5000/api/users/admin", {
             email,
             password,
         });

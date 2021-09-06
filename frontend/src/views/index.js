@@ -19,4 +19,5 @@ export {default as DemoClassById} from './DemoClassById'
 export {default as Internship} from './InternshipProgram'
 export {default as Scholarship} from './Scholarship'
 export {default as Loader} from './Loder'
-
+export {default as Email} from './Email'
+export { default as NotFound } from './NotFound';

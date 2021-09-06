@@ -11,7 +11,6 @@ const useStyles = makeStyles(theme => ({
     borderRadius: theme.spacing(1),
   },
 }));
-
 const Gallery = props => {
   const { data, className, ...rest } = props;
   const classes = useStyles();

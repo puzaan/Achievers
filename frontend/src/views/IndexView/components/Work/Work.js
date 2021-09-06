@@ -49,7 +49,7 @@ const Work = props => {
             direction={index % 2 === 1 ?  'row': 'row-reverse'}
             className={classes.listGrid}
           >
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <div>
               <SectionHeader
                 titleVariant="h5"
@@ -66,7 +66,7 @@ const Work = props => {
           </Link>
               </div>
             </Grid>
-            <Grid item container justify="center" xs={12} sm={6}>
+            <Grid item container justify="center" xs={12} sm={12} md={6}>
               <Image src={item.illustration} alt={item.title} />
             </Grid>
           </Grid>

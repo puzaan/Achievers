@@ -41,15 +41,15 @@ const internList = catcAsync(async(req, res, next) => {
 const internDelete = catcAsync (async(req, res, next)=> {
     
         const deleteid = await Internship.findById(req.params.id);
-        const datas = deleteid.pdf;
-        console.log(datas)
+        
+        
+        if(deleteid){
+            const datas = deleteid.pdf;
+       // console.log(datas)
         unlink(datas, (err) => {
             if (err) throw err;
             console.log(`${datas} is deleted`);
           });
-        
-        if(deleteid){
-            
 
             await deleteid.remove()
             res.json({

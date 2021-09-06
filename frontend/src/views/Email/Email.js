@@ -7,14 +7,14 @@ import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles(theme => ({
   formContainer: {
-   // height: '100%',
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    // minHeight: `calc(100vh - ${theme.mixins.toolbar['@media (min-width:600px)'].minHeight}px)`,
-    // maxWidth: 500,
-    //margin: `0 auto`,
+    minHeight: `calc(100vh - ${theme.mixins.toolbar['@media (min-width:600px)'].minHeight}px)`,
+    maxWidth: 500,
+    margin: `0 auto`,
   },
   section: {
     paddingTop: 0,
@@ -22,36 +22,32 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const EnrollForm = ({ history }) => {
+const Email = ({history}) => {
   const classes = useStyles();
 
   return (
     <div>
       <Helmet>
-        <title>Enrollment Form</title>
-        <meta
-          name="description"
-          content="Achievers Groups Research and Traning center"
+        <title>Email Form</title>
+        <meta 
+        name="description"
+        content="Achievers Groups Research and Traning center"
         />
       </Helmet>
-      {/* <Section className={classes.section}>
+      <Section className={classes.section}>
         <div className={classes.formContainer}>
           <SectionHeader
-            title="Enrollment Form"
+            title="Email Form"
             
             titleProps={{
               variant: 'h6',
             }}
           />
-         
           <Form />
         </div>
-      </Section> */}
-      <div className={classes.formContainer}>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehTLqktyBG0k413051ktf_mdWAM4ckYX-4WBjro2ergczRgg/viewform?embedded=true" width="700" height="1859" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" >Loading…</iframe>
-      </div>
+      </Section>
     </div>
   );
 };
 
-export default EnrollForm;
+export default Email;

@@ -10,5 +10,4 @@ router.get('/list', internList);
 router.delete('/remove/:id', internDelete);
 router.get('/detail/:id', internDetail);
 
-
 module.exports= router

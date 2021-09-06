@@ -21,13 +21,15 @@ import {
   Form as FormDetails,
   FormByIds as FormDetailsById,
   DemoClass,
-Counseling as Couselling,
-CounsellingLists,
-DemoClassLists ,
-CounsellingById,
-DemoClassById ,
-Internship,
-Scholarship,
+  Counseling as Couselling,
+  CounsellingLists,
+  DemoClassLists,
+  CounsellingById,
+  DemoClassById,
+  Internship,
+  Scholarship,
+  Email,
+  NotFound,
 } from './views';
 
 const Routes = () => {
@@ -55,6 +57,23 @@ const Routes = () => {
           />
         )}
       />
+
+
+      {/* <Route path='/enroll' component={() => {
+        window.location.href = 'https://achievergroups.com/enroll/';
+        return null;
+      }} /> */}
+      <Route
+        exact
+        path={`/emailSend`}
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={Email}
+            layout={MainLayout}
+          />
+        )}
+      />
       <Route
         exact
         path={`/internship`}
@@ -67,7 +86,7 @@ const Routes = () => {
         )}
       />
 
-<Route
+      <Route
         exact
         path={`/demoClass`}
         render={matchProps => (
@@ -89,7 +108,7 @@ const Routes = () => {
           />
         )}
       />
-      
+
 
       <Route
         exact
@@ -102,7 +121,7 @@ const Routes = () => {
           />
         )}
       />
-       <Route
+      <Route
         exact
         path={`/scholarship`}
         render={matchProps => (
@@ -136,7 +155,7 @@ const Routes = () => {
         )}
       />
 
-<Route
+      <Route
         exact
         path="/signup-simple"
         render={matchProps => (
@@ -148,7 +167,7 @@ const Routes = () => {
         )}
       />
 
-<Route
+      <Route
         exact
         path="/career-list"
         render={matchProps => (
@@ -171,7 +190,7 @@ const Routes = () => {
         )}
       />
 
-<Route
+      <Route
         exact
         path="/login"
         render={matchProps => (
@@ -206,7 +225,7 @@ const Routes = () => {
       />
 
 
-<Route
+      <Route
         exact
         path="/form/:id"
         render={matchProps => (
@@ -218,7 +237,7 @@ const Routes = () => {
         )}
       />
 
-<Route
+      <Route
         exact
         path={`/counsellingLists`}
         render={matchProps => (
@@ -230,7 +249,7 @@ const Routes = () => {
         )}
       />
 
-<Route
+      <Route
         exact
         path={`/demoClassLists`}
         render={matchProps => (
@@ -252,7 +271,7 @@ const Routes = () => {
           />
         )}
       />
-      
+
       <Route
         exact
         path="/counsellingLists/:id"
@@ -264,8 +283,19 @@ const Routes = () => {
           />
         )}
       />
-      
-      
+      <Route
+        exact
+        path="/not-found-cover"
+        render={matchProps => (
+          <WithLayout
+            {...matchProps}
+            component={NotFound}
+            layout={MiniLayout}
+          />
+        )}
+      />
+
+
       <Redirect to="/not-found-cover" />
     </Switch>
   );

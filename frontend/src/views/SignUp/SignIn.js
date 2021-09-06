@@ -42,7 +42,7 @@ export default function SignIn({history, location}) {
     const dispatch = useDispatch();
     const userLogin = useSelector((state) => state.userLogin)
     const {loding, error, userInfo} = userLogin;
-    const redirect = location.search ? location.search.split("=")[1] : "/login";
+    const redirect = location.search ? location.search.split("=")[1] : "/dashboard";
 useEffect(() => {
 if(userInfo){
     history.push(redirect)
@@ -52,6 +52,7 @@ if(userInfo){
 const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login(email, password))
+    
 }
     return (
         <Container component="main" maxWidth="xs">
