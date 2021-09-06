@@ -4,22 +4,44 @@ import { Form } from './components';
 import { SectionHeader } from 'components/molecules';
 import { Section } from 'components/organisms';
 import { Helmet } from 'react-helmet';
-
+import './form.css'
 const useStyles = makeStyles(theme => ({
   formContainer: {
-   // height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // height: '100%',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // alignItems: 'center',
+    // justifyContent: 'center',
     // minHeight: `calc(100vh - ${theme.mixins.toolbar['@media (min-width:600px)'].minHeight}px)`,
     // maxWidth: 500,
-    //margin: `0 auto`,
+    // margin: `0 auto`,
+
+
+    //display: 'flex',
+    // flexDirection: 'column',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    position: 'relative',
+    overflow: 'hidden',
+   // paddingTop: "56.25%"
+   
   },
   section: {
     paddingTop: 0,
     paddingBottom: 0,
   },
+
+  responsive: {
+    position: 'bsolute',
+    top: 0,
+    left: 50,
+    bottom: 0,
+    right: 20,
+    width: '100 %',
+    height: '100 %',
+    
+    
+  }
 }));
 
 const EnrollForm = ({ history }) => {
@@ -48,7 +70,9 @@ const EnrollForm = ({ history }) => {
         </div>
       </Section> */}
       <div className={classes.formContainer}>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehTLqktyBG0k413051ktf_mdWAM4ckYX-4WBjro2ergczRgg/viewform?embedded=true" width="700" height="1859" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" >Loading…</iframe>
+        <p align="center"> 
+        <iframe className={classes.responsive} src="https://docs.google.com/forms/d/e/1FAIpQLSehTLqktyBG0k413051ktf_mdWAM4ckYX-4WBjro2ergczRgg/viewform?embedded=true" width="700" height="1859" frameborder="0" marginheight="0" marginwidth="0"  scrolling="no">Loading…</iframe>
+      </p>
       </div>
     </div>
   );
