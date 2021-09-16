@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     width: '100 %',
     height: '2500',
     overflow: 'hidden',
-    paddingTop: '1940px',
+    paddingTop: '2040px',
 
 
     
