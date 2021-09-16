@@ -157,7 +157,7 @@ const Routes = () => {
 
       <Route
         exact
-        path="/signup-simple"
+        path="/contact"
         render={matchProps => (
           <WithLayout
             {...matchProps}

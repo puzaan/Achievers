@@ -248,7 +248,7 @@ const Topbar = ({
               color="textPrimary"
               className={clsx(classes.listItemText, 'menu-item')}
               component={Link}
-              to="/signup-simple"
+              to="/contact"
             >
               Contact Us
             </Typography>

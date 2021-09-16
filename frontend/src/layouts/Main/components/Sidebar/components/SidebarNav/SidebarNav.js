@@ -149,7 +149,7 @@ const SidebarNav = props => {
       <ListItem className={classes.listItem}>
         <Typography variant="h6" color="textPrimary" gutterBottom
         component={Link}
-        to='/signup-simple'
+          to='/contact'
         >
           Contact Us
         </Typography>

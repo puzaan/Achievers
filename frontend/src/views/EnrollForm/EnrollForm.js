@@ -5,6 +5,10 @@ import { SectionHeader } from 'components/molecules';
 import { Section } from 'components/organisms';
 import { Helmet } from 'react-helmet';
 import './form.css'
+
+
+
+
 const useStyles = makeStyles(theme => ({
   formContainer: {
     // height: '100%',
@@ -21,9 +25,21 @@ const useStyles = makeStyles(theme => ({
     // flexDirection: 'column',
     // alignItems: 'center',
     // justifyContent: 'center',
-    position: 'relative',
-    overflow: 'hidden',
+    // position: 'relative',
+    // overflow: 'hidden',
    // paddingTop: "56.25%"
+
+
+
+
+    position: 'relative',
+    width: '100 %',
+    height: '2500',
+    overflow: 'hidden',
+    paddingTop: '1940px',
+
+
+    
    
   },
   section: {
@@ -32,14 +48,23 @@ const useStyles = makeStyles(theme => ({
   },
 
   responsive: {
-    position: 'bsolute',
-    top: 0,
-    left: 50,
-    bottom: 0,
-    right: 20,
-    width: '100 %',
-    height: '100 %',
+    // position: 'bsolute',
+    // top: 0,
+    // left: 50,
+    // bottom: 0,
+    // right: 20,
+    // width: '100 %',
+    // height: '100 %',
     
+
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    width: '100%',
+    height: "2359",
+    border: 'none',
     
   }
 }));
@@ -69,9 +94,9 @@ const EnrollForm = ({ history }) => {
           <Form />
         </div>
       </Section> */}
-      <div className={classes.formContainer}>
+      <div className={classes.formContainer} >
         <p align="center"> 
-        <iframe className={classes.responsive} src="https://docs.google.com/forms/d/e/1FAIpQLSehTLqktyBG0k413051ktf_mdWAM4ckYX-4WBjro2ergczRgg/viewform?embedded=true" width="700" height="1859" frameborder="0" marginheight="0" marginwidth="0"  scrolling="no">Loading…</iframe>
+          <iframe className={ classes.responsive }src="https://docs.google.com/forms/d/e/1FAIpQLSehTLqktyBG0k413051ktf_mdWAM4ckYX-4WBjro2ergczRgg/viewform?embedded=true" width="1000" height="2359" frameborder="0" marginheight="0" marginwidth="0"  scrolling="no">Loading…</iframe>
       </p>
       </div>
     </div>
